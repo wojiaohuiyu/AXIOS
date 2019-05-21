@@ -1,0 +1,574 @@
+@import "./commo.less";
+*{
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.disp-block {
+  display: inline-block;
+}
+//左右浮动
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+//清除浮动
+.clearfix {
+  clear: both;
+}
+.clearfix:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+//左右移动
+.anim_fade_image{
+  position:absolute;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-direction: alternate;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: translateX(10px) rotate(10deg);
+  }
+  75% {
+    -webkit-transform: translateX(-10px) rotate(-10deg);
+  }
+}
+//图片渐入渐出
+.anim_shake_image{
+  position:absolute;
+  -webkit-animation-name: fadeInOut;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-direction: alternate;
+}
+@-webkit-keyframes fadeInOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 1;
+  }
+}
+//字体颜色
+.red-ff {
+  color: @red-ff2d;
+}
+.hs-666 {
+  color: @colorgr;
+}
+.hss{
+  color: #FF7124;
+}
+.white {
+  color: #fff;
+}
+.colordeep{
+  color: @colordeep;
+}
+//背景颜色
+.background-colordeep{
+  background: @colordeep;
+}
+.background-colorw{
+  background: #fff;
+}
+.hsff-7124{
+  color: #FF7124;
+}
+.background-colorgr{
+  background: @colorgr;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+//文本对其方式
+.text-align-c {
+  text-align: center;
+}
+.text-align-l {
+  text-align: left;
+}
+.text-align-r {
+  text-align: right;
+}
+.text-align-j {
+  text-align: justify;
+}
+//规定应该从父元素继承 text-align 属性的值。
+.text-align-i{
+  text-align: inherit;
+}
+.clearfix:after {
+   content: ' ';
+   display: inline-block;
+   clear: both;
+ }
+.clearfix:before {
+  content: ' ';
+  display: inline-block;
+  clear: both;
+}
+.w-space{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.border-top-1 {
+  border-top: 1px solid #cccccc;
+}
+.border-left-1 {
+  border-left: 1px solid #cccccc;
+}
+.border-right-1 {
+  border-right: 1px solid #cccccc;
+}
+.border-bottom-1 {
+  border-bottom: 1px solid #cccccc;
+}
+.cursor {
+  cursor: pointer;
+}
+//字体大小 font-size
+.t-f-12 {
+  font-size: 12px;
+}
+.t-f-14 {
+  font-size: 14px;
+}
+.t-f-16 {
+  font-size: 16px;
+}
+.t-f-18 {
+  font-size: 18px;
+}
+.t-f-20 {
+  font-size: 20px;
+}
+.t-f-22 {
+  font-size: 22px;
+}
+.t-f-24 {
+  font-size: 24px;
+}
+.t-f-26 {
+  font-size: 26px;
+}
+.t-f-30 {
+  font-size: 30px;
+}
+.t-f-36 {
+  font-size: 36px;
+}
+.t-f-40 {
+  font-size: 40px;
+}
+.t-f-50 {
+  font-size: 50px;
+}
+//字体加粗
+.f-weight-200 {
+  font-weight : 200;
+}
+.f-weight-300 {
+  font-weight : 300;
+}
+.f-weight-400 {
+  font-weight : 400;
+}
+.f-weight-500 {
+  font-weight : 500;
+}
+.f-weight-600 {
+  font-weight : 600;
+}
+.f-weight-700 {
+  font-weight : 700;
+}
+.f-weight-900 {
+  font-weight : 900;
+}
+.f-weight-800 {
+  font-weight : 800;
+}
+//padding 5 10 15 20 25 30 50
+.padding-5 {
+  padding: @number-5;
+}
+.padding-l-5 {
+  padding-left: @number-5;
+}
+.padding-r-5 {
+  padding-right: @number-5;
+}
+.padding-t-5 {
+  padding-top: @number-5;
+}
+.padding-b-5 {
+  padding-bottom: @number-5;
+}
+
+.padding-10 {
+  padding: @number-10;
+}
+.padding-l-10 {
+  padding-left: @number-10;
+}
+.padding-r-10 {
+  padding-right: @number-10;
+}
+.padding-t-10 {
+  padding-top: @number-10;
+}
+.padding-b-10 {
+  padding-bottom: @number-10;
+}
+
+
+.padding-15 {
+  padding: @number-15;
+}
+.padding-l-15 {
+  padding-left: @number-15;
+}
+.padding-r-15 {
+  padding-right: @number-15;
+}
+.padding-t-15 {
+  padding-top: @number-15;
+}
+.padding-b-15 {
+  padding-bottom: @number-15;
+}
+
+.padding-20 {
+  padding: @number-20;
+}
+.padding-l-20 {
+  padding-left: @number-20;
+}
+.padding-r-20 {
+  padding-right: @number-20;
+}
+.padding-t-20 {
+  padding-top: @number-20;
+}
+.padding-b-20 {
+  padding-bottom: @number-20;
+}
+
+
+.padding-25 {
+  padding: @number-25;
+}
+.padding-l-25 {
+  padding-left: @number-25;
+}
+.padding-r-25 {
+  padding-right: @number-25;
+}
+.padding-t-25 {
+  padding-top: @number-25;
+}
+.padding-b-25 {
+  padding-bottom: @number-25;
+}
+
+.padding-30 {
+  padding: @number-30;
+}
+.padding-l-30 {
+  padding-left: @number-30;
+}
+.padding-r-30 {
+  padding-right: @number-30;
+}
+.padding-t-30 {
+  padding-top: @number-30;
+}
+.padding-b-30 {
+  padding-bottom: @number-30;
+}
+
+.padding-30 {
+  padding: @number-30;
+}
+.padding-l-35 {
+  padding-left: @number-35;
+}
+.padding-r-35 {
+  padding-right: @number-35;
+}
+.padding-t-35 {
+  padding-top: @number-35;
+}
+.padding-b-35 {
+  padding-bottom: @number-35;
+}
+
+.padding-40 {
+  padding: @number-40;
+}
+.padding-l-40 {
+  padding-left: @number-40;
+}
+.padding-r-40 {
+  padding-right: @number-40;
+}
+.padding-t-40 {
+  padding-top: @number-40;
+}
+.padding-b-40 {
+  padding-bottom: @number-40;
+}
+
+.padding-45 {
+  padding: @number-45;
+}
+.padding-l-45 {
+  padding-left: @number-45;
+}
+.padding-r-45 {
+  padding-right: @number-45;
+}
+.padding-t-45 {
+  padding-top: @number-45;
+}
+.padding-b-45 {
+  padding-bottom: @number-45;
+}
+
+.padding-50 {
+  padding: @number-50;
+}
+.padding-l-50 {
+  padding-left: @number-50;
+}
+.padding-r-50 {
+  padding-right: @number-50;
+}
+.padding-t-50 {
+  padding-top: @number-50;
+}
+.padding-b-50 {
+  padding-bottom: @number-50;
+}
+
+//margin 5 10 15 20 25 30 50
+.margin-5 {
+  margin: @number-5;
+}
+.margin-l-5 {
+  margin-left: @number-5;
+}
+.margin-r-5 {
+  margin-right: @number-5;
+}
+.margin-t-5 {
+  margin-top: @number-5;
+}
+.margin-b-5 {
+  margin-bottom: @number-5;
+}
+
+.margin-10 {
+  margin: @number-10;
+}
+.margin-l-10 {
+  margin-left: @number-10;
+}
+.margin-r-10 {
+  margin-right: @number-10;
+}
+.margin-t-10 {
+  margin-top: @number-10;
+}
+.margin-b-10 {
+  margin-bottom: @number-10;
+}
+
+.margin-15 {
+  margin: @number-15;
+}
+.margin-l-15 {
+  margin-left: @number-15;
+}
+.margin-r-15 {
+  margin-right: @number-15;
+}
+.margin-t-15 {
+  margin-top: @number-15;
+}
+.margin-b-15 {
+  margin-bottom: @number-15;
+}
+
+.margin-20 {
+  margin: @number-20;
+}
+.margin-l-20 {
+  margin-left: @number-20;
+}
+.margin-r-20 {
+  margin-right: @number-20;
+}
+.margin-t-20 {
+  margin-top: @number-20;
+}
+.margin-b-20 {
+  margin-bottom: @number-20;
+}
+
+.margin-25 {
+  margin: @number-25;
+}
+.margin-l-25 {
+  margin-left: @number-25;
+}
+.margin-r-25 {
+  margin-right: @number-25;
+}
+.margin-t-25 {
+  margin-top: @number-25;
+}
+.margin-b-25 {
+  margin-bottom: @number-25;
+}
+
+.margin-30 {
+  margin: @number-30;
+}
+.margin-l-30 {
+  margin-left: @number-30;
+}
+.margin-r-30 {
+  margin-right: @number-30;
+}
+.margin-t-30 {
+  margin-top: @number-30;
+}
+.margin-b-30 {
+  margin-bottom: @number-30;
+}
+
+.margin-35 {
+  margin: @number-35;
+}
+.margin-l-35 {
+  margin-left: @number-35;
+}
+.margin-r-35 {
+  margin-right: @number-35;
+}
+.margin-t-35 {
+  margin-top: @number-35;
+}
+.margin-b-35 {
+  margin-bottom: @number-35;
+}
+
+.margin-40 {
+  margin: @number-40;
+}
+.margin-l-40 {
+  margin-left: @number-40;
+}
+.margin-r-40 {
+  margin-right: @number-40;
+}
+.margin-t-40 {
+  margin-top: @number-40;
+}
+.margin-b-40 {
+  margin-bottom: @number-40;
+}
+
+.margin-45 {
+  margin: @number-45;
+}
+.margin-l-45 {
+  margin-left: @number-30;
+}
+.margin-r-30 {
+  margin-right: @number-45;
+}
+.margin-t-45 {
+  margin-top: @number-45;
+}
+.margin-b-45 {
+  margin-bottom: @number-45;
+}
+
+.margin-50 {
+  margin: @number-50;
+}
+.margin-l-50 {
+  margin-left: @number-50;
+}
+.margin-r-50 {
+  margin-right: @number-50;
+}
+.margin-t-50 {
+  margin-top: @number-50;
+}
+.margin-b-50 {
+  margin-bottom: @number-50;
+}
+.margin-l-70 {
+  margin-left: @number-70;
+}
+.btn {
+  width: 76px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  color: @white;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 15px;
+  background: @red-ff2d;
+}
+.btndd {
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: @white;
+  display: inline-block;
+  border-radius: 100px;
+  font-size: 18px;
+  background: @red-ff2d;
+  opacity: 0.6;
+}
+.btnhd {
+  width: 146px;
+  height: 37px;
+  line-height: 37px;
+  text-align: center;
+  color: @white;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 14px;
+  background: @red-ff2d;
+}
