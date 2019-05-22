@@ -12,19 +12,7 @@
         <div class="mainnan-dq-s">
           <p>请选择城市</p>
           <ul class="mainnan-dq-s-ul">
-            <li><a href="">北京市</a></li>
-            <li><a href="">上海市</a></li>
-            <li><a href="">深圳市</a></li>
-            <li><a href="">南京市</a></li>
-            <li><a href="">杭州市</a></li>
-            <li><a href="">长沙市</a></li>
-            <li><a href="">沈阳市</a></li>
-            <li><a href="">合肥市</a></li>
-            <li><a href="">哈尔滨市</a></li>
-            <li><a href="">苏州市</a></li>
-            <li><a href="">无锡市</a></li>
-            <li><a href="">常州市</a></li>
-            <li><a href="">青岛市</a></li>
+            <li v-for="(item,index) in list_city" :key="index"><a>{{item.cname}}</a></li>
           </ul>
         </div>
       </div>
@@ -126,7 +114,20 @@
   </div>
 </template>
 <script>
-export default {}
+import {postList} from 'api/request'
+export default {
+  data () {
+    return {
+      list_city: []
+    }
+  },
+  mounted () {
+    postList((data) => {
+      this.list_city = data[0].data
+      console.log(this.list_city)
+    })
+  }
+}
 </script>
 <style lang="less" scoped>
   @import "../../../static/css/commonality";
