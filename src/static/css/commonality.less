@@ -6,6 +6,10 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.wh{
+  width: 100%;
+  height: 100%;
+}
 a{
   text-decoration: none;
 }
@@ -36,7 +40,7 @@ a {
 }
 //左右移动
 .anim_fade_image{
-  position:absolute;
+  //position:absolute;
   -webkit-animation-name: fadeIn;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-duration: 5s;
@@ -68,6 +72,74 @@ a {
   75% {
     opacity: 1;
   }
+}
+//动画效果
+.shades:hover{
+  opacity: 1;
+  -webkit-animation-name: hvr-buzz-out;
+  -moz-animation-name: hvr-buzz-out;
+  -ms-animation-name: hvr-buzz-out;
+  animation-name: hvr-buzz-out;
+  -webkit-animation-duration: 0.75s;
+  -moz--animation-duration: 0.75s;
+  -ms--animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+@keyframes hvr-buzz-out{
+  10%{transform: translateX(3px) rotate(2deg)}
+20%{transform: translateX(-3px) rotate(-2deg)}
+30%{transform: translateX(3px) rotate(2deg)}
+40%{transform: translateX(-3px) rotate(-2deg)}
+50%{transform: translateX(2px) rotate(1deg)}
+60%{transform: translateX(-2px) rotate(-1deg)}
+70%{transform: translateX(2px) rotate(1deg)}
+80%{transform: translateX(-2px) rotate(-1deg)}
+90%{transform: translateX(1px) rotate(0)}
+100%{transform: translateX(-1px) rotate(0)}
+}
+@-webkit-keyframes hvr-buzz-out{
+  10%{-webkit-transform: translateX(3px) rotate(2deg)}
+20%{-webkit-transform: translateX(-3px) rotate(-2deg)}
+30%{-webkit-transform: translateX(3px) rotate(2deg)}
+40%{-webkit-transform: translateX(-3px) rotate(-2deg)}
+50%{-webkit-transform: translateX(2px) rotate(1deg)}
+60%{-webkit-transform: translateX(-2px) rotate(-1deg)}
+70%{-webkit-transform: translateX(2px) rotate(1deg)}
+80%{-webkit-transform: translateX(-2px) rotate(-1deg)}
+90%{-webkit-transform: translateX(1px) rotate(0)}
+100%{-webkit-transform: translateX(-1px) rotate(0)}
+}
+@-moz-keyframes hvr-buzz-out{
+  10%{-moz-transform: translateX(3px) rotate(2deg)}
+20%{-moz-transform: translateX(-3px) rotate(-2deg)}
+30%{-moz-transform: translateX(3px) rotate(2deg)}
+40%{-moz-transform: translateX(-3px) rotate(-2deg)}
+50%{-moz-transform: translateX(2px) rotate(1deg)}
+60%{-moz-transform: translateX(-2px) rotate(-1deg)}
+70%{-moz-transform: translateX(2px) rotate(1deg)}
+80%{-moz-transform: translateX(-2px) rotate(-1deg)}
+90%{-moz-transform: translateX(1px) rotate(0)}
+100%{-moz-transform: translateX(-1px) rotate(0)}
+}
+@-ms-keyframes hvr-buzz-out{
+  10%{-ms-transform: translateX(3px) rotate(2deg)}
+20%{-ms-transform: translateX(-3px) rotate(-2deg)}
+30%{-ms-transform: translateX(3px) rotate(2deg)}
+40%{-ms-transform: translateX(-3px) rotate(-2deg)}
+50%{-ms-transform: translateX(2px) rotate(1deg)}
+60%{-ms-transform: translateX(-2px) rotate(-1deg)}
+70%{-ms-transform: translateX(2px) rotate(1deg)}
+80%{-ms-transform: translateX(-2px) rotate(-1deg)}
+90%{-ms-transform: translateX(1px) rotate(0)}
+100%{-ms-transform: translateX(-1px) rotate(0)}
 }
 //字体颜色
 .red-ff {
