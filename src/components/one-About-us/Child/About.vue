@@ -89,4 +89,10 @@ export default {
   .el-tabs__item is-top is-active {
     font-size: 20px;
   }
+  .el-tabs--card>.el-tabs__header .el-tabs__nav {
+    border: 1px solid transparent;
+  }
+  .el-tabs--card>.el-tabs__header {
+    border-bottom: 1px solid transparent;
+  }
 </style>

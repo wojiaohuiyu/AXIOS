@@ -24,18 +24,50 @@
         </div>
       </div>
     </div>
-    <div class="footer-fixe">
-      <a href="#top" target="_self">
-        <img src="../../../static/images/foot-fhtb.jpg" alt="">
-      </a>
-    </div>
+    <ul class="footer-fixe">
+      <li>
+        <router-link to="/one/sort">
+          <a class="icon-one-fixe1 icon-one-fixe12"></a>
+        </router-link>
+      </li>
+      <li class="footer-fixe-li2">
+        <a class="icon-one-fixe2 icon-one-fixe21"></a>
+        <a  class="footer-fixe-li2-img2">
+          <div class="footer-fixe-li2-img2-1">
+            <img src="../../../static/images/one-ewm1.jpg" alt="">
+            <div>
+              <span>扫一扫</span>
+              <span>关注微信</span>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="footer-fixe-li3">
+        <a class="icon-one-fixe3 icon-one-fixe31"></a>
+        <a class="footer-fixe-li2-img3">
+          <div class="footer-fixe-li2-img2-1">
+            <img class="" src="../../../static/images/one-ewm2.jpg" alt="">
+            <div>
+              <span>扫一扫</span>
+              <span>关注微信</span>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="footer-fixe-li4">
+        <a class="" href="#" target="_self">
+          <img src="../../../static/images/one-top3.jpg" alt="">
+        </a>
+      </li>
+    </ul>
     <div class="footer-tt padding-t-10"><img src="../../../static/images/one-21.gif" alt=""></div>
   </footer>
 </template>
 <script>
 export default {}
 </script>
-<style>
+<style lang="less">
+  @import "../../../static/css/commonality";
   .footer-t {
     text-align: center;
     display: block;
@@ -67,12 +99,48 @@ export default {}
   .footer-fixe {
     position: fixed;
     right: 10px;
-    top: 520px;
+    top: 250px;
     z-index: 9999;
   }
-  .footer-fixe img{
-    width: 40px;
-    height: 40px;
-    border-radius: 60px;
+  .footer-fixe li{
+    width: 67px;
+    height: 56px;
+    background: #e6e6e6;
+    margin-top: 5px;
+    text-align: center;
+  }
+   .footer-fixe li:hover {
+    background: #FF7124;
+  }
+   .footer-fixe-li2 {
+     .footer-fixe-li2-img2{
+       position: relative;
+       left: 100px;
+     }
+     &:hover {
+       .footer-fixe-li2-img2 {
+         left: -190px;
+         top: -120px;
+       }
+     }
+   }
+  .footer-fixe-li3 {
+    .footer-fixe-li2-img3{
+      position: relative;
+      left: 100px;
+    }
+    &:hover {
+      .footer-fixe-li2-img3 {
+        left: -190px;
+        top: -120px;
+      }
+    }
+  }
+  .footer-fixe-li2-img2-1 {
+    width: 200px;
+  }
+  .footer-fixe > .footer-fixe-li4 {
+    width: 67px;
+    height: 46px;
   }
 </style>

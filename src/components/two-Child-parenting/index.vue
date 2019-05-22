@@ -34,60 +34,11 @@
         <!--右侧-->
       <div class="el-copy">
         <ul>
-          <li class="list1 fl">
+          <li v-for="(item , index) in lists" :key="index" class="list1 fl">
             <div class="bg">
               <i></i>
-              <h6>
-                <router-link to="/two/page">日常保洁</router-link>
-              </h6>
-              <a href="#"><p>
-                钟点工/小时工/清洁护理</p></a>
-              <a href="#" class="url uli"></a>
-            </div>
-          </li>
-          <li class="list2 fr">
-            <div class="bg">
-              <i></i>
-              <h6>
-                <router-link to="/two/econmics">开荒保洁</router-link>
-                </h6>
-              <a href="#"><p>新居开荒  装修硬装结束第一次保洁</p></a>
-              <a href="#" class="url uli"></a>
-            </div>
-          </li>
-          <li class="list3 fl">
-            <div class="bg">
-              <i></i>
-              <h6>
-              <router-link to="/two/Division">大扫除</router-link>
-              </h6>
-              <a href="#"><p>
-                清除顽洉  适用长期未住、未彻底清洁房屋</p></a>
-              <a href="#" class="url uli"></a>
-            </div>
-          </li>
-          <li class="list4 fr">
-            <div class="bg">
-              <i></i>
-              <a href="#"><h6>家电清洗</h6></a>
-              <a href="#"><p>全面清洗  去污防病菌</p></a>
-              <a href="#" class="url uli"></a>
-            </div>
-          </li>
-          <li class="list5 fl">
-            <div class="bg">
-              <i></i>
-              <a href="#"><h6>擦玻璃</h6></a>
-              <a href="#"><p>
-                专业清洗，明亮窗外色</p></a>
-              <a href="#" class="url uli"></a>
-            </div>
-          </li>
-          <li class="list6 fr">
-            <div class="bg">
-              <i></i>
-              <a href="#"><h6>搬家</h6></a>
-              <a href="#"><p>优质服务  还您一个温馨的家</p></a>
+              <h6><router-link to="/two/page">{{item.name}}</router-link></h6>
+              <a href="#"><p>{{item.gender}}</p></a>
               <a href="#" class="url uli"></a>
             </div>
           </li>
@@ -102,28 +53,36 @@ import sursore1 from './images/1.jpg'
 import sursore2 from './images/1.jpg'
 import sursore3 from './images/1.jpg'
 export default {
+  data () {
+    return {
+      imglist: [sursore1, sursore2, sursore3],
+      lists: [
+        {name: '日常保洁', gender: '钟点工/小时工/清洁护理'},
+        {name: '开荒保洁', gender: '新居开荒  装修硬装结束第一次保洁'},
+        {name: '大扫除', gender: '清除顽洉  适用长期未住、未彻底清洁房屋'},
+        {name: '家电清洗', gender: '全面清洗  去污防病菌'},
+        {name: '擦玻璃', gender: '专业清洗，明亮窗外色'},
+        {name: '搬家', gender: '优质服务  还您一个温馨的家'}
+      ]
+    }
+  },
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
   methods: {
     handleScroll () {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-      var offsetTop = document.querySelector('#searchBar').offsetTop;
-      if(scrollTop <= 656){
-        offsetTop = 656 - Number(scrollTop);
-        document.querySelector('#searchBar').style.top = offsetTop + 'px';
-      }else{
-        document.querySelector('#searchBar').style.top = '0px';
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+      var offsetTop = document.querySelector('#searchBar').offsetTop
+      if (scrollTop <= 656) {
+        offsetTop = 656 - Number(scrollTop)
+        document.querySelector('#searchBar').style.top = offsetTop + 'px'
+      } else {
+        document.querySelector('#searchBar').style.top = '0px'
       }
-    },
+    }
   },
   destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
-  },
-  data () {
-    return {
-      imglist: [sursore1, sursore2, sursore3]
-    }
   }
 }
 </script>
@@ -154,7 +113,7 @@ export default {
 .el-header dl{
   line-height: 60px;
   background: url(./images/11.gif) no-repeat 17px center;
-  padding: 0px 20px 0px 40px;
+  padding: 0 20px 0 40px;
 }
 .el-header dl a{
   font-size: 19px;

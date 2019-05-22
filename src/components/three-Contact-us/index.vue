@@ -3,7 +3,7 @@
 <div class="cotton">
   <!--走马灯-->
   <el-carousel height="480px">
-    <el-carousel-item v-for="(item, index) in imglist" :key="index">
+    <el-carousel-item v-for="(item , index) in imglist" :key="index">
       <img :src="item" style="width: 100%;height: 100%; display: block;"/>
     </el-carousel-item>
   </el-carousel>
@@ -40,30 +40,13 @@
           <p>专业月嫂，呵护宝宝</p>
         </div>
         <ul class="contents">
-          <li>
-            <i>01</i>
-            <h6>新生儿生活护理</h6>
-            <p>指导正确哺乳 <br>喂养、呵护、洗澡 <br>穿衣、换洗尿布 <br>物品消毒</p>
-          </li>
-          <li>
-            <i style="background-color: rgb(255, 115, 92);">02</i>
-            <h6 style="color: rgb(255, 115, 92);">新生儿专业护理</h6>
-            <p>婴儿洗澡、抚触 <br>按摩，大小便观察 <br>口腔、黄疸 <br>脐部护理等</p>
-          </li>
-          <li>
-            <i>03</i>
-            <h6>产妇生活护理</h6>
-            <p>产妇营养餐制作 <br>营养膳食搭配 <br>协助产妇擦浴等</p>
-          </li>
-          <li>
-            <i style="background-color: rgb(255, 115, 92);">04</i>
-            <h6 style="color: rgb(255, 115, 92);">产妇专业护理</h6>
-            <p>产褥期观察、护理 <br>产后恢复指导 <br>协助母乳喂养 <br>健康护理</p>
-          </li>
-          <li>
-            <i>05</i>
-            <h6>日常服务</h6>
-            <p>为产妇及婴儿 <br>清洗衣物 <br>打扫母婴卧室卫生等</p>
+          <li v-for="(item , index) in list" :key="index">
+            <i>{{item.name}}</i>
+            <h6>{{item.age}}</h6>
+            <p>{{item.pack}}</p>
+            <p>{{item.packe}}</p>
+            <p>{{item.packed}}</p>
+            <p>{{item.packing}}</p>
           </li>
         </ul>
         <p>温馨提示：每月26天工作时间，如遇国家规定假日上班的，除正常工资外，加付正常工资的3倍计算</p>
@@ -76,7 +59,8 @@
         </div>
         <ul class="content">
           <li>
-            <b><img src="./imgaes/6.jpg" width="135" height="114"></b>
+            <b>
+              <img src="./imgaes/6.jpg" width="135" height="114"></b>
             <div>
               <b>8800/月</b>
               <h6>初级(一星)月嫂</h6>
@@ -85,7 +69,8 @@
             </div>
           </li>
           <li>
-            <b><img src="./imgaes/7.jpg" width="135" height="114"></b>
+            <b>
+              <img src="./imgaes/7.jpg" width="135" height="114"></b>
             <div>
               <b>9800/月</b>
               <h6>中级(二星)月嫂</h6>
@@ -94,7 +79,8 @@
             </div>
           </li>
           <li>
-            <b><img src="./imgaes/8.jpg" width="135" height="114"></b>
+            <b>
+              <img src="./imgaes/8.jpg" width="135" height="114"></b>
             <div>
               <b>10800/月</b>
               <h6>高级(三星)月嫂</h6>
@@ -236,14 +222,21 @@ export default {
       }else{
         document.querySelector('#searchBar').style.top = '0px';
       }
-    },
+    }
   },
   destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
   },
   data () {
     return {
-      imglist: [sursore1, sursore2]
+      imglist: [sursore1, sursore2],
+      list: [
+        {id: 1, name: '01', age: '新生儿生活护理', pack: '指导正确哺乳', packe: '喂养、呵护、洗澡', packed: '穿衣、换洗尿布', packing: '物品消毒'},
+        {id: 2, name: '02', age: '新生儿专业护理', pack: '婴儿洗澡、抚触', packe: '按摩，大小便观察', packed: '口腔、黄疸', packing: '脐部护理等'},
+        {id: 3, name: '03', age: '产妇生活护理', pack: '产妇营养餐制作', packe: '营养膳食搭配', packed: '协助产妇擦浴等'},
+        {id: 4, name: '04', age: '产妇专业护理', pack: '产褥期观察、护理', packe: '产后恢复指导', packed: '协助母乳喂养', packing: '健康护理'},
+        {id: 5, name: '05', age: '日常服务', pack: '为产妇及婴儿', packe: '清洗衣物', packed: '打扫母婴卧室卫生等'}
+      ]
     }
   },
 }

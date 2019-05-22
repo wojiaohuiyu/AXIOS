@@ -52,7 +52,17 @@ export default {}
       border-top: 3px solid @colordeep;
     }
   }
+  .mainnan li::after {
+    border-right: @colordeep;
+  }
   router-link {
     color: red;
+  }
+  .router-link-exact-active .router-link-active{
+    color: black;
+  }
+  .router-link-active{
+    color: @colordeep;
+    padding: 37px 0px 0px 0;
   }
 </style>

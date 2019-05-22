@@ -83,7 +83,6 @@ export default {}
     width: 100%;
     height: 730px;
     background: white;
-    border:1px solid darkgrey;
   }
   .classification-img {
     margin: 0 30px 0 100px;

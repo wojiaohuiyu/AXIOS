@@ -43,8 +43,7 @@ export default {
               showClose: true
             })
           }
-        }
-        else {
+        } else {
           return false
         }
       })

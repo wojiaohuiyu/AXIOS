@@ -98,7 +98,6 @@
                 <tr>
                   <th colspan="3">61m<sup>2</sup>-90m<sup>2</sup></th>
                   <th>¥780<!--2017.11.25改动之前是&yen;680--></th>
-
                 </tr>
                 </tbody>
               </table>

@@ -71,8 +71,8 @@
             <h2>服务内容</h2>
           </div>
           <div class="content_list clearfix">
-             <div class="fl">
-               <img class="anim_fade_image" src="~im/girl.jpg">
+             <div class="fl shades">
+               <img src="~im/girl.jpg">
              </div>
             <ul class="fr banef-ul">
               <li>
@@ -270,7 +270,7 @@ export default {
   .value_list{
     text-align: center;
     margin: 20px auto 40px;
-    background: url("~im/yuer_bg.jpg") no-repeat center;
+    background: url('~im/yuer_bg.jpg') no-repeat center;
     width: 950px;
     height: 45px;
   }
@@ -289,7 +289,7 @@ export default {
     text-align: center;
     float: left;
     margin-left: 50px;
-    background: url("~im/yuer_bg_cont.png");
+    background: url('~im/yuer_bg_cont.png');
     -webkit-transition: 0.4s all;
     -moz-transition: 0.4s all;
     -ms-transition: 0.4s all;
@@ -307,7 +307,6 @@ export default {
   }
   .write p{
     font-size: 12px;
-    color: #a9a9a9;
     padding: 5px 22px;
     text-align: left;
   }
@@ -325,7 +324,7 @@ export default {
     border-bottom: 1px solid
   }
   .cont{
-    background: url("~im/cont_01.png") no-repeat left top;
+    background: url('~im/cont_01.png') no-repeat left top;
     padding-left: 70px;
     margin: 5px 50px;
   }
@@ -359,7 +358,7 @@ export default {
     -o-transition: 0.4s all;
     transition: 0.4s all;
     &:hover{
-      box-shadow: 5px 5px 0.5px #E95513;
+      box-shadow: 0px 0px 5px #A9A9A9;
       transform: translateY(-10px);
       -webkit-transform: translateY(-10px);
       -moz-transform: translateY(-10px);

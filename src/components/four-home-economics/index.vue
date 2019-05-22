@@ -537,6 +537,10 @@ export default {
       background-position: 0px 100px;
     }
   }
+  .main-content .li1 a:hover + P{
+    color: #E95513;
+    font-weight: 600;
+  }
   .main-content{
     background: url("~im/cuiru2.png") no-repeat center bottom;
     height: 199px;
