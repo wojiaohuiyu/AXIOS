@@ -8,6 +8,7 @@
 <script>
 import Topnav from './components/one-About-us/MainNan/MainNan.vue'// 导航
 import Footer from './components/one-About-us/Footer/footer.vue'// 底部
+import './static/css/icon.less'
 import axios from 'axios'
 export default {
   components: {

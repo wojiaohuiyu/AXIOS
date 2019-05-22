@@ -5,35 +5,34 @@
 .icon-f-class {
   width: 35px;
   height: 32px;
-  &:hover{
-    background: url("../images/Bottom_icon2.png");
-    width: 35px;
-    height: 32px;
-  }
+}
+.icon-f-class:hover {
+  background: url("../images/Bottom_icon2.png");
+  width: 35px;
+  height: 32px;
 }
 .icon-f-class2 {
   width: 35px;
   height: 32px;
   background-position: -41px 0px;
-  &:hover{
-    background: url("../images/Bottom_icon2.png");
-    width: 35px;
-    height: 32px;
-    background-position: -40px 0px;
-  }
+}
+.icon-f-class2:hover {
+  background: url("../images/Bottom_icon2.png");
+  width: 35px;
+  height: 32px;
+  background-position: -40px 0px;
 }
 .icon-f-class3 {
   width: 35px;
   height: 32px;
   background-position: -79px 0px;
-  &:hover{
-    background: url("../images/Bottom_icon2.png");
-    width: 35px;
-    height: 32px;
-    background-position: -79px 0px;
-  }
 }
-
+.icon-f-class3:hover {
+  background: url("../images/Bottom_icon2.png");
+  width: 35px;
+  height: 32px;
+  background-position: -79px 0px;
+}
 .icon-c-v {
   background: url("../images/index-icon-1.png");
   display: inline-block;
@@ -41,12 +40,10 @@
 .icon-c-v1 {
   width: 41px;
   height: 41px;
-  &:hover{
-    background: url("../images/index-icon-2.png");
-  }
 }
-
-
+.icon-c-v1:hover {
+  background: url("../images/index-icon-2.png");
+}
 .icon-one-bf {
   background: url("../images/one-yuan_01.png");
   display: inline-block;
@@ -54,11 +51,10 @@
 .icon-one-bf1 {
   width: 54px;
   height: 54px;
-  &:hover{
-    background: url("../images/one-yuan_02.png");
-  }
 }
-
+.icon-one-bf1:hover {
+  background: url("../images/one-yuan_02.png");
+}
 .icon-one-lx {
   background: url("../images/one-ladress.jpg");
   display: inline-block;
@@ -66,11 +62,10 @@
 .icon-one-lx1 {
   width: 58px;
   height: 54px;
-  &:hover{
-    background: url("../images/one-ladress_on.jpg");
-  }
 }
-
+.icon-one-lx1:hover {
+  background: url("../images/one-ladress_on.jpg");
+}
 .icon-one-lx2 {
   background: url("../images/one-lTel.jpg");
   display: inline-block;
@@ -78,11 +73,10 @@
 .icon-one-lx12 {
   width: 58px;
   height: 54px;
-  &:hover{
-    background: url("../images/one-lTel_on.jpg");
-  }
 }
-
+.icon-one-lx12:hover {
+  background: url("../images/one-lTel_on.jpg");
+}
 .icon-one-lx3 {
   background: url("../images/one-le-mail.jpg");
   display: inline-block;
@@ -90,11 +84,10 @@
 .icon-one-lx13 {
   width: 58px;
   height: 54px;
-  &:hover{
-    background: url("../images/one-le-mail_on.jpg");
-  }
 }
-
+.icon-one-lx13:hover {
+  background: url("../images/one-le-mail_on.jpg");
+}
 .icon-one-lx4 {
   background: url("../images/one-lqq.jpg");
   display: inline-block;
@@ -102,11 +95,10 @@
 .icon-one-lx14 {
   width: 58px;
   height: 58px;
-  &:hover{
-    background: url("../images/one-lqq_on.jpg");
-  }
 }
-
+.icon-one-lx14:hover {
+  background: url("../images/one-lqq_on.jpg");
+}
 .icon-one-fixe1 {
   background: url("../images/one-yy.png") no-repeat;
   display: inline-block;
@@ -115,12 +107,11 @@
 .icon-one-fixe12 {
   width: 67px;
   height: 56px;
-  &:hover{
-    background: url("../images/one-yy.png") no-repeat;
-    background-position: center center;
-  }
 }
-
+.icon-one-fixe12:hover {
+  background: url("../images/one-yy.png") no-repeat;
+  background-position: center center;
+}
 .icon-one-fixe2 {
   background: url("../images/one-wx.png") no-repeat;
   display: inline-block;
@@ -129,12 +120,11 @@
 .icon-one-fixe21 {
   width: 67px;
   height: 56px;
-  &:hover{
-    background: url("../images/one-wx2.png") no-repeat;
-    background-position: center center;
-  }
 }
-
+.icon-one-fixe21:hover {
+  background: url("../images/one-wx2.png") no-repeat;
+  background-position: center center;
+}
 .icon-one-fixe3 {
   background: url("../images/one-sj4.png") no-repeat;
   display: inline-block;
@@ -143,12 +133,11 @@
 .icon-one-fixe31 {
   width: 67px;
   height: 56px;
-  &:hover{
-    background: url("../images/one-sj.png") no-repeat;
-    background-position: center center;
-  }
 }
-
+.icon-one-fixe31:hover {
+  background: url("../images/one-sj.png") no-repeat;
+  background-position: center center;
+}
 .icon-nine-gth {
   background: url("../images/nine-gth.png") no-repeat;
   display: inline-block;
@@ -157,8 +146,8 @@
 .icon-nine-gth2 {
   width: 67px;
   height: 56px;
-  &:hover{
-    background: url("../images/nine-gth.png") no-repeat;
-    background-position: center center;
-  }
+}
+.icon-nine-gth2:hover {
+  background: url("../images/nine-gth.png") no-repeat;
+  background-position: center center;
 }
