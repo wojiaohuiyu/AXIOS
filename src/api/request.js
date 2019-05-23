@@ -6,6 +6,14 @@ let postList = function (callback) {
     console.log('已经用回调函数callback')
   })
 }
+let viewList = function (callback) {
+  sendaxios('post', 'jsopngen_querySy.action', {
+    bid: 6
+  }).then((res) => {
+    callback(res)
+    console.log('已经用回调函数callback')
+  })
+}
 export {
-  postList
+  postList,viewList
 }

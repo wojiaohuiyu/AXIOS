@@ -6,13 +6,7 @@
       </router-link>
     </div>
     <ul class="mainnan container t-f-20 ">
-      <li><router-link to="/">首页</router-link></li>
-      <li><router-link to="/two">家政</router-link></li>
-      <li><router-link to="/three">月嫂</router-link></li>
-      <li><router-link to="/four">催乳师</router-link></li>
-      <li><router-link to="/five">育儿嫂</router-link></li>
-      <li><router-link to="/six">保姆</router-link></li>
-      <li><router-link to="/seven">城市合伙</router-link></li>
+      <li v-for="(link, index) in lind" :key="index"><router-link :to="{path: linkData[link.gname], query: {bid: link.id}}">{{link.gname}}</router-link></li>
       <li><router-link to="/eight">个人中心</router-link></li>
       <li><router-link to="/sixz">注册</router-link></li>
       <li><router-link to="/onminty">登录</router-link></li>
@@ -20,7 +14,23 @@
   </header>
 </template>
 <script>
-export default {}
+import {viewList} from 'api/request'
+import {linkData} from 'api/index'
+export default {
+  data () {
+    return {
+      lind: [],
+      linkData
+    }
+  },
+  mounted () {
+    viewList((data) => {
+      this.lind = data[0].data
+//      this.lind = data[0].data
+//      console.log(data)
+    })
+  }
+}
 </script>
 <style lang="less" scoped>
   @import "../../../static/css/commonality";

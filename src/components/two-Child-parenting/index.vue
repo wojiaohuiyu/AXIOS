@@ -55,6 +55,7 @@ import sursore3 from './images/1.jpg'
 export default {
   data () {
     return {
+      bid:  '',
       imglist: [sursore1, sursore2, sursore3],
       lists: [
         {name: '日常保洁', gender: '钟点工/小时工/清洁护理'},
@@ -68,6 +69,7 @@ export default {
   },
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
+    this.bid = this.$route.query.bid
   },
   methods: {
     handleScroll () {
