@@ -6,7 +6,9 @@
       </router-link>
     </div>
     <ul class="mainnan container t-f-20 ">
-      <li v-for="(link, index) in lind" :key="index"><router-link :to="{path: linkData[link.gname], query: {bid: link.id}}">{{link.gname}}</router-link></li>
+      <li v-for="(link, index) in lind" :key="index">
+        <router-link :to="{path: linkData[link.gname], query: {bid: link.id}}">{{link.gname}}
+        </router-link></li>
       <li><router-link to="/eight">个人中心</router-link></li>
       <li><router-link to="/sixz">注册</router-link></li>
       <li><router-link to="/onminty">登录</router-link></li>
@@ -14,19 +16,26 @@
   </header>
 </template>
 <script>
+import {api, linkData} from 'api/index'
 import {viewList} from 'api/request'
-import {linkData} from 'api/index'
 export default {
   data () {
     return {
       lind: [],
-      linkData
+      linkData,
+      api
     }
   },
   mounted () {
     viewList((data) => {
       this.lind = data[0].data
+<<<<<<< HEAD
       console.log(data)
+=======
+      this.banner2 = data[0].data.paddress
+//      this.lind = data[0].data
+//      console.log(data)
+>>>>>>> 792ea92f4637d7ea1c573b004d53cc9bc3f740b8
     })
   }
 }
@@ -63,9 +72,6 @@ export default {
   }
   .mainnan li::after {
     border-right: @colordeep;
-  }
-  router-link {
-    color: red;
   }
   .router-link-exact-active .router-link-active{
     color: black;

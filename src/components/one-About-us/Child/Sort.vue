@@ -226,7 +226,7 @@ export default {
   }
 }
 </script>
-<style>
+<style scoped>
   .width-100{
     width: 100%;
   }
@@ -236,29 +236,29 @@ export default {
     background: #f2eadf;
     margin-bottom: 50px;
   }
-  .el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
+  /deep/.el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
     color: white;
     background: #ff7e00;
   }
-  .el-tabs__item {
+  /deep/.el-tabs__item {
     color: #ff7e00;
     border: 1px solid #ff7e00;
-    margin: 0 15px;
+    margin: 0 35px;
     font-size: 15px;
   }
-  .el-tabs--card>.el-tabs__header .el-tabs__item {
+  /deep/.el-tabs--card>.el-tabs__header .el-tabs__item {
     border: 1px solid #ff7e00;
   }
-  .el-tabs--card>.el-tabs__header .el-tabs__item:first-child {
+  /deep/.el-tabs--card>.el-tabs__header .el-tabs__item:first-child {
     border-left: 1px solid;
   }
-  .el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
+  /deep/.el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
     border-bottom-color: #ff7e00;
   }
-  .el-tabs__nav is-top .el-tabs__item {
+  /deep/.el-tabs__nav is-top .el-tabs__item {
     font-size: 20px;
   }
-  .el-tabs__item is-top is-active {
+  /deep/.el-tabs__item is-top is-active {
     font-size: 20px;
   }
   .sort-4-1 {

@@ -16,7 +16,10 @@
   "dependencies": {
     "axios": "^0.18.0",
     "element-ui": "^2.8.2",
+<<<<<<< HEAD
     "js-md5": "^0.7.3",
+=======
+>>>>>>> 792ea92f4637d7ea1c573b004d53cc9bc3f740b8
     "qs": "^6.7.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"

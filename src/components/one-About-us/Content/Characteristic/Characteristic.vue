@@ -1,26 +1,25 @@
 <template>
   <div class="container">
-    <div class="text-align-c background-colorw margin-b-50">
+    <div class="text-align-c background-colorw margin-b-50 margin-t-50">
         <div class="t-f-40 f-weight-600">特色服务</div>
-        <div class="t-f-18 margin-t-20 t-f-24 {
-">专业 优质 贴心 温馨</div>
+        <div class="t-f-18 margin-t-20 t-f-24">专业 优质 贴心 温馨</div>
         <div class="disp-block margin-t-10"><img src="../../../../static/images/index-bg.png" alt=""></div>
         <ul class="margin-t-50 characteristic-ul">
             <li class="shades">
               <img src="../../../../static/images/one-spe-serv1.png" alt="">
-              <div class="t-f-20 margin-t-20">月嫂</div>
+              <div class="t-f-20 margin-t-20">{{lists[0].gname}}</div>
             </li>
             <li class="shades">
               <img src="../../../../static/images/one-spe-serv2.png" alt="">
-              <div class="t-f-20 margin-t-20">保姆</div>
+              <div class="t-f-20 margin-t-20">{{lists[1].gname}}</div>
             </li>
             <li class="shades">
               <img src="../../../../static/images/one-spe-serv3.png" alt="">
-              <div class="t-f-20 margin-t-20">育儿嫂</div>
+              <div class="t-f-20 margin-t-20">{{lists[2].gname}}</div>
             </li>
             <li class="shades">
               <img src="../../../../static/images/one-spe-serv4.png" alt="">
-              <div class="t-f-20 margin-t-20">催乳师</div>
+              <div class="t-f-20 margin-t-20">{{lists[3].gname}}</div>
             </li>
         </ul>
     </div>
@@ -54,6 +53,7 @@
         </ul>
         <a class="btn characteristic-btn margin-t-50 margin-b-50">More</a>
     </div>
+    <!--行业资讯-->
     <div class="margin-b-30 characteristic-eeeee">
         <div class="text-align-c">
           <div class="t-f-40 f-weight-600">行业资讯</div>
@@ -104,7 +104,25 @@
   </div>
 </template>
 <script>
-export default {}
+import {indexlList, indexhysj} from 'api/request'
+export default {
+  data () {
+    return {
+      lists: [],
+      lil: []
+    }
+  },
+  mounted () {
+    indexlList((success) => {
+      this.lists = success
+      console.log(this.lists)
+    })
+    indexhysj((success) => {
+      this.lists = success
+      console.log(this.lists)
+    })
+  }
+}
 </script>
 <style lang="less" scoped>
   @import "../../../../static/css/commonality";

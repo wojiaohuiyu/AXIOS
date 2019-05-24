@@ -252,10 +252,31 @@
   </div>
 </template>
 <script>
+import {api} from 'api/index'
+import {Yuer} from 'api/request'
+import {Yuerbaner} from 'api/request'
 import Cebians from './comcebian/index.vue'
 export default {
+  data () {
+    return {
+      YueConet: [],
+      Yuebaner: [],
+      api
+    }
+  },
   components: {
     Cebians
+  },
+  mounted () {
+    Yuer((data) => {
+      this.YueConet = data
+      console.log('育儿嫂')
+      console.log(data)
+    })
+    Yuerbaner((data) => {
+      console.log('育儿嫂图片')
+      console.log(data)
+    })
   }
 }
 </script>

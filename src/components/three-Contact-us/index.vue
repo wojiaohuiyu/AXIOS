@@ -4,18 +4,23 @@
   <!--走马灯-->
   <el-carousel height="480px">
     <el-carousel-item v-for="(item , index) in imglist" :key="index">
-      <img :src="item" style="width: 100%;height: 100%; display: block;"/>
+      <img :src="api+banner" style="width: 100%;height: 100%; display: block;"/>
     </el-carousel-item>
   </el-carousel>
   <div class="container">
     <!--左侧-->
     <div class="caruser">
+<<<<<<< HEAD
       <div class="fllor1">
         <ul>
           <li>
             <p></p>
           </li>
         </ul>
+=======
+      <div>
+        <img :src="api+tonet" alt="">
+>>>>>>> 792ea92f4637d7ea1c573b004d53cc9bc3f740b8
       </div>
       <div class="fllor5">
         <div class="title1">
@@ -28,14 +33,17 @@
             <div class="pic1">
               <a href="#">
                 <router-link to="/three/matron">
-                  <img src="./imgaes/14.png" width="140" height="176">
+                  <div>
+                    <img class="" :src="api+imgs[0].img" width="140" height="176">
+                    <img class="pic11" src="./imgaes/14.png" alt="">
+                  </div>
                 </router-link>
               </a>
             </div>
             <div class="content">
-              <p>刘阿姨</p>
+              <p>{{lists[0].ename}}</p>
               <b>五星级月嫂</b>
-              <p>51岁/江苏/9年月嫂经验</p>
+              <p>{{lists[0].eage}}岁/{{lists[0].enativeplace}}/{{lists[0].eworkingage}}年月嫂经验</p>
               <hr>
               <p>刘姨性格温和随和，比较容易相处，她在宝宝喂养方面较有经验，善于观察宝宝的状态，判断哭闹原因。在照顾方面不正确的做法，她能给予意见和纠正，很感谢！</p>
             </div>
@@ -44,14 +52,17 @@
             <div class="pic2">
               <a href="#">
                 <router-link to="/three/matron">
-                  <img src="./imgaes/14.png" width="140" height="176">
+                  <div>
+                    <img class="" :src="api+imgs[1].img" width="140" height="176">
+                    <img class="pic11" src="./imgaes/14.png" alt="">
+                  </div>
                 </router-link>
               </a>
             </div>
             <div class="content">
-              <p>韩阿姨</p>
+              <p>{{lists[1].ename}}</p>
               <b>五星级月嫂</b>
-              <p>42岁/江苏/7年月嫂经验</p>
+              <p>{{lists[1].eage}}岁/{{lists[1].enativeplace}}/{{lists[1].eworkingage}}年月嫂经验</p>
               <hr>
               <p>在这26天里，韩姨很有责任心，专业的护理知识，工作热情，相处融洽，以后有朋友请月嫂我会推荐韩姨的，感谢韩姨的细心照顾！</p>
             </div>
@@ -60,14 +71,15 @@
             <div class="pic3">
               <a href="#">
                 <router-link to="/three/matron">
-                  <img src="./imgaes/14.png" width="140" height="176">
+                  <img class="" :src="api+imgs[2].img" width="140" height="176">
+                  <img class="pic11" src="./imgaes/14.png" alt="">
                 </router-link>
                 </a>
             </div>
             <div class="content">
-              <p>朱阿姨</p>
+              <p>{{lists[2].ename}}</p>
               <b>五星级月嫂</b>
-              <p>41岁/江苏/8年月嫂经验</p>
+              <p>{{lists[2].eage}}岁/{{lists[2].enativeplace}}/{{lists[2].eworkingage}}年月嫂经验</p>
               <hr>
               <p>朱姐做事非常认真负责，对宝宝更是无微不至，我们非常放心，同时也从朱姐那里学习很多东西，现在宝宝非常健康聪明，感谢朱姐的付出和辛苦，祝她今后更加顺利！</p>
             </div>
@@ -96,9 +108,12 @@
 </div>
 </template>
 <script>
+import {api} from 'api/index'
+import {viewysList, yslrList, ysxxList} from 'api/request'
 import sursore1 from './imgaes/17.jpg'
 import sursore2 from './imgaes/18.jpg'
 export default {
+<<<<<<< HEAD
   mounted () {
     window. addEventListener('scroll', this.handleScroll)
   },
@@ -121,6 +136,56 @@ export default {
     return {
       imglist: [sursore1, sursore2]
     }
+=======
+  data () {
+    return {
+      banner: [],
+      tonet: [],
+      lists: [],
+      imgs: [],
+      api,
+      imglist: [sursore1, sursore2],
+      list: [
+        {id: 1, name: '01', age: '新生儿生活护理', pack: '指导正确哺乳', packe: '喂养、呵护、洗澡', packed: '穿衣、换洗尿布', packing: '物品消毒'},
+        {id: 2, name: '02', age: '新生儿专业护理', pack: '婴儿洗澡、抚触', packe: '按摩，大小便观察', packed: '口腔、黄疸', packing: '脐部护理等'},
+        {id: 3, name: '03', age: '产妇生活护理', pack: '产妇营养餐制作', packe: '营养膳食搭配', packed: '协助产妇擦浴等'},
+        {id: 4, name: '04', age: '产妇专业护理', pack: '产褥期观察、护理', packe: '产后恢复指导', packed: '协助母乳喂养', packing: '健康护理'},
+        {id: 5, name: '05', age: '日常服务', pack: '为产妇及婴儿', packe: '清洗衣物', packed: '打扫母婴卧室卫生等'}
+      ]
+    }
+  },
+  mounted () {
+    viewysList((data) => {
+      this.banner = data.paddress
+      console.log(this.banner)
+    })
+    yslrList((data) => {
+      this.tonet = data.paddress
+      console.log(this.tonet)
+    })
+    ysxxList((data) => {
+      this.lists = data.data
+      this.imgs = data.data
+      console.log(this.lists)
+      console.log(this.imgs)
+    })
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll () {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      var offsetTop = document.querySelector('#searchBar').offsetTop
+      if (scrollTop <= 600) {
+        offsetTop = 600 - Number(scrollTop)
+        document.querySelector('#searchBar').style.top = offsetTop + 'px'
+      } else {
+        document.querySelector('#searchBar').style.top = '0px'
+      }
+    }
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
+>>>>>>> 792ea92f4637d7ea1c573b004d53cc9bc3f740b8
   }
 }
 </script>
@@ -386,8 +451,14 @@ export default {
    top: -8px;
    z-index: 50;
    left: 65px;
-  background-image: url("./imgaes/13.png");
  }
+.pic12 {
+  z-index: 999;
+}
+.pic11 {
+  position: relative;
+  top: -180px;
+}
 .caruser .fllor5 ul li .pic2{
   background-size: 100%;
   background-position: center;
@@ -397,7 +468,6 @@ export default {
   top: -8px;
   z-index: 50;
   left: 65px;
-  background-image: url("./imgaes/15.png");
 }
 .caruser .fllor5 ul li .pic3{
   background-size: 100%;
@@ -408,7 +478,6 @@ export default {
   top: -8px;
   z-index: 50;
   left: 65px;
-  background-image: url("./imgaes/16.png");
 }
 .caruser .fllor5 ul li .content {
   border: 1px solid #E0DFDF;
