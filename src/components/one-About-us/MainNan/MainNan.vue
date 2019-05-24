@@ -16,26 +16,22 @@
   </header>
 </template>
 <script>
+import {api, linkData} from 'api/index'
 import {viewList} from 'api/request'
-import {linkData} from 'api/index'
-import {bannerList} from 'api/request'
 export default {
   data () {
     return {
       lind: [],
       linkData,
-      banner
+      api
     }
   },
   mounted () {
     viewList((data) => {
       this.lind = data[0].data
+      this.banner2 = data[0].data.paddress
 //      this.lind = data[0].data
 //      console.log(data)
-    })
-    bannerList((success) => {
-      this.banner = success
-      console.log(this.banner)
     })
   }
 }
@@ -72,9 +68,6 @@ export default {
   }
   .mainnan li::after {
     border-right: @colordeep;
-  }
-  router-link {
-    color: red;
   }
   .router-link-exact-active .router-link-active{
     color: black;
