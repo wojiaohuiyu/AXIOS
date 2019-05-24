@@ -112,10 +112,7 @@ export default {
     }
   },
   mounted () {
-    bannerList((success) => {
-      this.lists = success
-      console.log(this.lists)
-    })
+
   }
 }
 </script>
