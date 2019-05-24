@@ -1,23 +1,25 @@
 <template>
   <div class="bodycol">
     <div class="banner-four">
-    <img src="~im/cuiru-banner.jpg">
+    <!--<img src="~im/cuiru-banner.jpg">-->
+    <img :src="api+listbaner">
     </div>
       <div class="question background-colorwhite margin-b-60 colordeep">
         <h3 class="f-weight-700">您是否对催乳师感到疑惑？</h3>
-        <p>催乳师，是对专门催乳的人员的一种称呼，催乳师就是通过催乳技术即中医推拿手法，为产妇解决产后无乳、乳少等症状的专业护理人员。</p>
+        <p>{{listconent[3].ppriority}}</p>
         <span class="ban-ic"></span>
       </div>
     <div class="container clearfix">
     <el-row :gutter="20" class="margin-t-40">
       <el-col class="margin-b-50 background-colorw" :span="18"><div class="grid-content bg-purple">
+        <img :src="api+listimg">
         <div class="content-box">
           <h2 class="text-align-c hr">
             <span>服务内容</span>
           </h2>
         </div>
         <!--element切换-->
-        <el-tabs v-model="activeName" @tab-click="handleClick">
+        <el-tabs v-model="activeName">
           <el-tab-pane label="母乳哺育" name="first">
             <ul class="clearfix" name="nav" data-herf='1'>
               <li class="one">
@@ -325,16 +327,33 @@
   </div>
 </template>
 <script>
+import {api} from 'api/index'
+import {Cuir, Cuirbaner} from 'api/request'
 import Cebiian from './cebian/index.vue'
 export default {
   data () {
     return {
-      activeName: 'first'
+      activeName: 'first',
+      listimg: [],
+      listbaner: [],
+      listconent: [],
+      api
     }
   },
   components: {
     Cebiian
+  },
+  mounted () {
+    Cuir((data) => {
+      this.listimg = data.paddress
+      // console.log(data)
+    })
+    Cuirbaner((data) => {
+      this.listbaner = data.paddress
+      this.listconent = data.data
+    })
   }
+
 }
 </script>
 <style lang="less" scoped>
