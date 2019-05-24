@@ -11,7 +11,8 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://rvaetr.natappfree.cc',
+        // 接口
+        target: 'http://88ja9g.natappfree.cc',
         changeOrigin:true,
         pathRewrite:{
           '^/api':''

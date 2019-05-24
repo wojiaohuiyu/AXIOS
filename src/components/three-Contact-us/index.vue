@@ -12,120 +12,10 @@
     <div class="caruser">
       <div class="fllor1">
         <ul>
-          <li class="li1">
-            <p>
-              面试严格<br>系统培训 <br>标准化服务
-            </p>
-          </li>
-          <li class="li2">
-            <p>
-              月嫂保险 <br>人身体检 <br>规范性工作
-            </p>
-          </li>
-          <li class="li3">
-            <p>
-              持证上岗 <br>权威认证 <br>专业化保障
-            </p>
+          <li>
+            <p></p>
           </li>
         </ul>
-        <h6>带您了解月嫂</h6>
-        <p>月嫂是母婴护理师的俗称，主要是专业护理产妇与新生儿，服务的内容以月子
-          护理为主，新生儿的护理占80%，产妇的护理占20%。月嫂属于高级家政人员，不
-          同于一般的家政护理员。</p>
-      </div>
-      <div class="fllor2">
-        <div class="title1">
-          <h2>服务介绍</h2>
-          <i></i>
-          <p>专业月嫂，呵护宝宝</p>
-        </div>
-        <ul class="contents">
-          <li v-for="(item , index) in list" :key="index">
-            <i>{{item.name}}</i>
-            <h6>{{item.age}}</h6>
-            <p>{{item.pack}}</p>
-            <p>{{item.packe}}</p>
-            <p>{{item.packed}}</p>
-            <p>{{item.packing}}</p>
-          </li>
-        </ul>
-        <p>温馨提示：每月26天工作时间，如遇国家规定假日上班的，除正常工资外，加付正常工资的3倍计算</p>
-      </div>
-      <div class="fllor3">
-        <div class="title1">
-          <h2>服务价格</h2>
-          <i></i>
-          <p>价格透明，品质保证</p>
-        </div>
-        <ul class="content">
-          <li>
-            <b>
-              <img src="./imgaes/6.jpg" width="135" height="114"></b>
-            <div>
-              <b>8800/月</b>
-              <h6>初级(一星)月嫂</h6>
-              <p>资历：工作2年以上</p>
-              <p>经验：有护理10个以上宝宝经验</p>
-            </div>
-          </li>
-          <li>
-            <b>
-              <img src="./imgaes/7.jpg" width="135" height="114"></b>
-            <div>
-              <b>9800/月</b>
-              <h6>中级(二星)月嫂</h6>
-              <p>资历：工作3年以上</p>
-              <p>经验：有护理15个以上宝宝经验</p>
-            </div>
-          </li>
-          <li>
-            <b>
-              <img src="./imgaes/8.jpg" width="135" height="114"></b>
-            <div>
-              <b>10800/月</b>
-              <h6>高级(三星)月嫂</h6>
-              <p>资历：工作4年以上</p>
-              <p>经验：有护理20个以上宝宝经验</p>
-            </div>
-          </li>
-          <li>
-            <b><img src="./imgaes/9.jpg" width="135" height="114"></b>
-            <div>
-              <b>11800/月</b>
-              <h6>特级(四星)月嫂</h6>
-              <p>资历：工作5年以上</p>
-              <p>经验：有护理10个以上宝宝经验</p>
-            </div>
-          </li>
-          <li>
-            <b><img src="./imgaes/10.jpg" width="135" height="114"></b>
-            <div>
-              <b>13800/月</b>
-              <h6>金牌(五星)月嫂</h6>
-              <p>资历：工作5年以上</p>
-              <p>经验：有护理30个以上宝宝经验</p>
-            </div>
-          </li>
-          <li>
-            <b><img src="./imgaes/11.jpg" width="135" height="114"></b>
-            <div>
-              <b>16800/月</b>
-              <h6>金牌月嫂</h6>
-              <p>资历：工作6年以上</p>
-              <p>经验：有护理30个以上宝宝经验</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="fllor4">
-        <div class="title1">
-          <h2>服务流程</h2>
-          <i></i>
-          <p>快速预约，准时服务</p>
-        </div>
-        <div>
-          <img src="./imgaes/12.jpg">
-        </div>
       </div>
       <div class="fllor5">
         <div class="title1">
@@ -210,7 +100,7 @@ import sursore1 from './imgaes/17.jpg'
 import sursore2 from './imgaes/18.jpg'
 export default {
   mounted () {
-    window.addEventListener('scroll', this.handleScroll)
+    window. addEventListener('scroll', this.handleScroll)
   },
   methods: {
     handleScroll () {
@@ -229,16 +119,9 @@ export default {
   },
   data () {
     return {
-      imglist: [sursore1, sursore2],
-      list: [
-        {id: 1, name: '01', age: '新生儿生活护理', pack: '指导正确哺乳', packe: '喂养、呵护、洗澡', packed: '穿衣、换洗尿布', packing: '物品消毒'},
-        {id: 2, name: '02', age: '新生儿专业护理', pack: '婴儿洗澡、抚触', packe: '按摩，大小便观察', packed: '口腔、黄疸', packing: '脐部护理等'},
-        {id: 3, name: '03', age: '产妇生活护理', pack: '产妇营养餐制作', packe: '营养膳食搭配', packed: '协助产妇擦浴等'},
-        {id: 4, name: '04', age: '产妇专业护理', pack: '产褥期观察、护理', packe: '产后恢复指导', packed: '协助母乳喂养', packing: '健康护理'},
-        {id: 5, name: '05', age: '日常服务', pack: '为产妇及婴儿', packe: '清洗衣物', packed: '打扫母婴卧室卫生等'}
-      ]
+      imglist: [sursore1, sursore2]
     }
-  },
+  }
 }
 </script>
 <style lang="less" scoped>

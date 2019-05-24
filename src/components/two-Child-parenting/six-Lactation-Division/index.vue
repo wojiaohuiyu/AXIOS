@@ -1,3 +1,4 @@
+<!--大扫除-->
 <template>
   <div class="oriflamme">
     <!--banner-->
@@ -171,37 +172,37 @@
   </div>
 </template>
 <script>
-  import sursore1 from './images/1.jpg'
-  import sursore2 from './images/1.jpg'
-  import sursore3 from './images/1.jpg'
-  export default {
-    mounted () {
-      window.addEventListener('scroll', this.handleScroll)
-    },
-    methods: {
-      handleScroll () {
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-        var offsetTop = document.querySelector('#searchBar').offsetTop;
-        var offsetTop = document.querySelector('#fixer').offsetTop;
-        if(scrollTop <= 631){
-          offsetTop = 631 - Number(scrollTop);
-          document.querySelector('#searchBar').style.top = offsetTop + 'px'
-          document.querySelector('#fixer').style.top = offsetTop + 'px';
-        }else{
-          document.querySelector('#searchBar').style.top = '0px';
-          document.querySelector('#fixer').style.top = '0px';
-        }
-      },
-    },
-    destroyed () {
-      window.removeEventListener('scroll', this.handleScroll)
-    },
-    data () {
-      return {
-        imglist: [sursore1,sursore2,sursore3]
+import sursore1 from './images/1.jpg'
+import sursore2 from './images/1.jpg'
+import sursore3 from './images/1.jpg'
+export default {
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll () {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+      var offsetTop = document.querySelector('#searchBar').offsetTop
+      var offsetTop = document.querySelector('#fixer').offsetTop
+      if (scrollTop <= 631) {
+        offsetTop = 631 - Number(scrollTop)
+        document.querySelector('#searchBar').style.top = offsetTop + 'px'
+        document.querySelector('#fixer').style.top = offsetTop + 'px'
+      } else {
+        document.querySelector('#searchBar').style.top = '0px'
+        document.querySelector('#fixer').style.top = '0px'
       }
     }
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  data () {
+    return {
+      imglist: [sursore1, sursore2, sursore3]
+    }
   }
+}
 </script>
 <style lang="less" scoped>
   /*左侧边*/
@@ -257,7 +258,6 @@
   /*走马灯*/
   .clear {
     clear: both;
-    height: 0px;
     overflow: hidden;
   }
   .oriflamme{
@@ -276,7 +276,7 @@
   }
   .header-clean dl{
     line-height: 40px;
-    padding: 0px 20px 0px 40px;
+    padding: 0 20px 0 40px;
     background: url(./images/2.gif) no-repeat 17px center;
   }
   .header-clean dl a{

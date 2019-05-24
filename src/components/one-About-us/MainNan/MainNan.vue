@@ -26,8 +26,7 @@ export default {
   mounted () {
     viewList((data) => {
       this.lind = data[0].data
-//      this.lind = data[0].data
-//      console.log(data)
+      console.log(data)
     })
   }
 }

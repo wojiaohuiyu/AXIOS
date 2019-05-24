@@ -1,6 +1,7 @@
 // 再次封装ajax请求 使用promise再次封装
 import {api} from './index'
 import axios from 'axios'
+import qs from 'qs'
 // axios封装ajax请求
 // params
 // methods请求的类型
@@ -11,7 +12,7 @@ function sendaxios (methods = 'post', url, data = {}) {
     axios({
       methods: methods,
       url: api + url,
-      data: data
+      data: qs.stringify(data)
     }).then((res) => {
       res = res.data
       resolve(res)
