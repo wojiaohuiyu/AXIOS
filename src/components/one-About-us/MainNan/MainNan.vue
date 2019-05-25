@@ -18,7 +18,6 @@
 <script>
 import {api, linkData} from 'api/index'
 import {viewList} from 'api/request'
-import {linkData} from 'api/index'
 export default {
   data () {
     return {
