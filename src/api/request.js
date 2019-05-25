@@ -4,11 +4,7 @@ import sendaxios from './axios'
 let postList = function (callback) {
   sendaxios('post', 'jsopnctiy_queryAllcity.action').then((res) => {
     callback(res)
-<<<<<<< HEAD
     // console.log('已经用回调函数callback')
-=======
-    console.log('1已经用回调函数callback')
->>>>>>> aa224effbb2f42b26a951bfdf452adfe1bee9878
   })
 }
 // 顶部导航
@@ -17,10 +13,7 @@ let viewList = function (callback) {
     bid: 6
   }).then((res) => {
     callback(res)
-<<<<<<< HEAD
     // console.log('已经用回调函数callback')
-=======
-    console.log('2已经用回调函数callback')
   })
 }
 // 家政内容
@@ -42,7 +35,6 @@ let leftList = function (data, callback) {
   sendaxios('post', 'user_phonyzaction.action', data).then((res) => {
     callback(res)
     console.log('5已经用回调函数callback')
->>>>>>> aa224effbb2f42b26a951bfdf452adfe1bee9878
   })
 }
 

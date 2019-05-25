@@ -113,9 +113,6 @@ export default {
     }
   },
   mounted () {
-<<<<<<< HEAD
-
-=======
     indexlList((success) => {
       this.lists = success
       console.log(this.lists)
@@ -124,7 +121,6 @@ export default {
       this.lists = success
       console.log(this.lists)
     })
->>>>>>> aa224effbb2f42b26a951bfdf452adfe1bee9878
   }
 }
 </script>

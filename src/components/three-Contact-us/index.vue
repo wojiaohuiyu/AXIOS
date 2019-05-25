@@ -10,17 +10,14 @@
   <div class="container">
     <!--左侧-->
     <div class="caruser">
-<<<<<<< HEAD
       <div class="fllor1">
         <ul>
           <li>
             <p></p>
           </li>
         </ul>
-=======
       <div>
         <img :src="api+tonet" alt="">
->>>>>>> 792ea92f4637d7ea1c573b004d53cc9bc3f740b8
       </div>
       <div class="fllor5">
         <div class="title1">
@@ -113,7 +110,6 @@ import {viewysList, yslrList, ysxxList} from 'api/request'
 import sursore1 from './imgaes/17.jpg'
 import sursore2 from './imgaes/18.jpg'
 export default {
-<<<<<<< HEAD
   mounted () {
     window. addEventListener('scroll', this.handleScroll)
   },
@@ -136,7 +132,6 @@ export default {
     return {
       imglist: [sursore1, sursore2]
     }
-=======
   data () {
     return {
       banner: [],
@@ -185,7 +180,6 @@ export default {
   },
   destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
->>>>>>> 792ea92f4637d7ea1c573b004d53cc9bc3f740b8
   }
 }
 </script>
