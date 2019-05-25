@@ -18,13 +18,12 @@
 <script>
 import {viewList} from 'api/request'
 import {linkData} from 'api/index'
-import {bannerList} from 'api/request'
 export default {
   data () {
     return {
       lind: [],
       linkData,
-      banner
+      banner: []
     }
   },
   mounted () {
@@ -32,10 +31,6 @@ export default {
       this.lind = data[0].data
 //      this.lind = data[0].data
 //      console.log(data)
-    })
-    bannerList((success) => {
-      this.banner = success
-      console.log(this.banner)
     })
   }
 }
