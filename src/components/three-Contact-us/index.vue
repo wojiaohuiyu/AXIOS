@@ -4,128 +4,23 @@
   <!--走马灯-->
   <el-carousel height="480px">
     <el-carousel-item v-for="(item , index) in imglist" :key="index">
-      <img :src="item" style="width: 100%;height: 100%; display: block;"/>
+      <img :src="api+banner" style="width: 100%;height: 100%; display: block;"/>
     </el-carousel-item>
   </el-carousel>
   <div class="container">
     <!--左侧-->
     <div class="caruser">
+<<<<<<< HEAD
       <div class="fllor1">
         <ul>
-          <li class="li1">
-            <p>
-              面试严格<br>系统培训 <br>标准化服务
-            </p>
-          </li>
-          <li class="li2">
-            <p>
-              月嫂保险 <br>人身体检 <br>规范性工作
-            </p>
-          </li>
-          <li class="li3">
-            <p>
-              持证上岗 <br>权威认证 <br>专业化保障
-            </p>
+          <li>
+            <p></p>
           </li>
         </ul>
-        <h6>带您了解月嫂</h6>
-        <p>月嫂是母婴护理师的俗称，主要是专业护理产妇与新生儿，服务的内容以月子
-          护理为主，新生儿的护理占80%，产妇的护理占20%。月嫂属于高级家政人员，不
-          同于一般的家政护理员。</p>
-      </div>
-      <div class="fllor2">
-        <div class="title1">
-          <h2>服务介绍</h2>
-          <i></i>
-          <p>专业月嫂，呵护宝宝</p>
-        </div>
-        <ul class="contents">
-          <li v-for="(item , index) in list" :key="index">
-            <i>{{item.name}}</i>
-            <h6>{{item.age}}</h6>
-            <p>{{item.pack}}</p>
-            <p>{{item.packe}}</p>
-            <p>{{item.packed}}</p>
-            <p>{{item.packing}}</p>
-          </li>
-        </ul>
-        <p>温馨提示：每月26天工作时间，如遇国家规定假日上班的，除正常工资外，加付正常工资的3倍计算</p>
-      </div>
-      <div class="fllor3">
-        <div class="title1">
-          <h2>服务价格</h2>
-          <i></i>
-          <p>价格透明，品质保证</p>
-        </div>
-        <ul class="content">
-          <li>
-            <b>
-              <img src="./imgaes/6.jpg" width="135" height="114"></b>
-            <div>
-              <b>8800/月</b>
-              <h6>初级(一星)月嫂</h6>
-              <p>资历：工作2年以上</p>
-              <p>经验：有护理10个以上宝宝经验</p>
-            </div>
-          </li>
-          <li>
-            <b>
-              <img src="./imgaes/7.jpg" width="135" height="114"></b>
-            <div>
-              <b>9800/月</b>
-              <h6>中级(二星)月嫂</h6>
-              <p>资历：工作3年以上</p>
-              <p>经验：有护理15个以上宝宝经验</p>
-            </div>
-          </li>
-          <li>
-            <b>
-              <img src="./imgaes/8.jpg" width="135" height="114"></b>
-            <div>
-              <b>10800/月</b>
-              <h6>高级(三星)月嫂</h6>
-              <p>资历：工作4年以上</p>
-              <p>经验：有护理20个以上宝宝经验</p>
-            </div>
-          </li>
-          <li>
-            <b><img src="./imgaes/9.jpg" width="135" height="114"></b>
-            <div>
-              <b>11800/月</b>
-              <h6>特级(四星)月嫂</h6>
-              <p>资历：工作5年以上</p>
-              <p>经验：有护理10个以上宝宝经验</p>
-            </div>
-          </li>
-          <li>
-            <b><img src="./imgaes/10.jpg" width="135" height="114"></b>
-            <div>
-              <b>13800/月</b>
-              <h6>金牌(五星)月嫂</h6>
-              <p>资历：工作5年以上</p>
-              <p>经验：有护理30个以上宝宝经验</p>
-            </div>
-          </li>
-          <li>
-            <b><img src="./imgaes/11.jpg" width="135" height="114"></b>
-            <div>
-              <b>16800/月</b>
-              <h6>金牌月嫂</h6>
-              <p>资历：工作6年以上</p>
-              <p>经验：有护理30个以上宝宝经验</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="fllor4">
-        <div class="title1">
-          <h2>服务流程</h2>
-          <i></i>
-          <p>快速预约，准时服务</p>
-        </div>
-        <div>
-          <img src="./imgaes/12.jpg">
-        </div>
+=======
+      <div>
+        <img :src="api+tonet" alt="">
+>>>>>>> 792ea92f4637d7ea1c573b004d53cc9bc3f740b8
       </div>
       <div class="fllor5">
         <div class="title1">
@@ -138,14 +33,17 @@
             <div class="pic1">
               <a href="#">
                 <router-link to="/three/matron">
-                  <img src="./imgaes/14.png" width="140" height="176">
+                  <div>
+                    <img class="" :src="api+imgs[0].img" width="140" height="176">
+                    <img class="pic11" src="./imgaes/14.png" alt="">
+                  </div>
                 </router-link>
               </a>
             </div>
             <div class="content">
-              <p>刘阿姨</p>
+              <p>{{lists[0].ename}}</p>
               <b>五星级月嫂</b>
-              <p>51岁/江苏/9年月嫂经验</p>
+              <p>{{lists[0].eage}}岁/{{lists[0].enativeplace}}/{{lists[0].eworkingage}}年月嫂经验</p>
               <hr>
               <p>刘姨性格温和随和，比较容易相处，她在宝宝喂养方面较有经验，善于观察宝宝的状态，判断哭闹原因。在照顾方面不正确的做法，她能给予意见和纠正，很感谢！</p>
             </div>
@@ -154,14 +52,17 @@
             <div class="pic2">
               <a href="#">
                 <router-link to="/three/matron">
-                  <img src="./imgaes/14.png" width="140" height="176">
+                  <div>
+                    <img class="" :src="api+imgs[1].img" width="140" height="176">
+                    <img class="pic11" src="./imgaes/14.png" alt="">
+                  </div>
                 </router-link>
               </a>
             </div>
             <div class="content">
-              <p>韩阿姨</p>
+              <p>{{lists[1].ename}}</p>
               <b>五星级月嫂</b>
-              <p>42岁/江苏/7年月嫂经验</p>
+              <p>{{lists[1].eage}}岁/{{lists[1].enativeplace}}/{{lists[1].eworkingage}}年月嫂经验</p>
               <hr>
               <p>在这26天里，韩姨很有责任心，专业的护理知识，工作热情，相处融洽，以后有朋友请月嫂我会推荐韩姨的，感谢韩姨的细心照顾！</p>
             </div>
@@ -170,14 +71,15 @@
             <div class="pic3">
               <a href="#">
                 <router-link to="/three/matron">
-                  <img src="./imgaes/14.png" width="140" height="176">
+                  <img class="" :src="api+imgs[2].img" width="140" height="176">
+                  <img class="pic11" src="./imgaes/14.png" alt="">
                 </router-link>
                 </a>
             </div>
             <div class="content">
-              <p>朱阿姨</p>
+              <p>{{lists[2].ename}}</p>
               <b>五星级月嫂</b>
-              <p>41岁/江苏/8年月嫂经验</p>
+              <p>{{lists[2].eage}}岁/{{lists[2].enativeplace}}/{{lists[2].eworkingage}}年月嫂经验</p>
               <hr>
               <p>朱姐做事非常认真负责，对宝宝更是无微不至，我们非常放心，同时也从朱姐那里学习很多东西，现在宝宝非常健康聪明，感谢朱姐的付出和辛苦，祝她今后更加顺利！</p>
             </div>
@@ -206,11 +108,14 @@
 </div>
 </template>
 <script>
+import {api} from 'api/index'
+import {viewysList, yslrList, ysxxList} from 'api/request'
 import sursore1 from './imgaes/17.jpg'
 import sursore2 from './imgaes/18.jpg'
 export default {
+<<<<<<< HEAD
   mounted () {
-    window.addEventListener('scroll', this.handleScroll)
+    window. addEventListener('scroll', this.handleScroll)
   },
   methods: {
     handleScroll () {
@@ -229,6 +134,16 @@ export default {
   },
   data () {
     return {
+      imglist: [sursore1, sursore2]
+    }
+=======
+  data () {
+    return {
+      banner: [],
+      tonet: [],
+      lists: [],
+      imgs: [],
+      api,
       imglist: [sursore1, sursore2],
       list: [
         {id: 1, name: '01', age: '新生儿生活护理', pack: '指导正确哺乳', packe: '喂养、呵护、洗澡', packed: '穿衣、换洗尿布', packing: '物品消毒'},
@@ -239,6 +154,39 @@ export default {
       ]
     }
   },
+  mounted () {
+    viewysList((data) => {
+      this.banner = data.paddress
+      console.log(this.banner)
+    })
+    yslrList((data) => {
+      this.tonet = data.paddress
+      console.log(this.tonet)
+    })
+    ysxxList((data) => {
+      this.lists = data.data
+      this.imgs = data.data
+      console.log(this.lists)
+      console.log(this.imgs)
+    })
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll () {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      var offsetTop = document.querySelector('#searchBar').offsetTop
+      if (scrollTop <= 600) {
+        offsetTop = 600 - Number(scrollTop)
+        document.querySelector('#searchBar').style.top = offsetTop + 'px'
+      } else {
+        document.querySelector('#searchBar').style.top = '0px'
+      }
+    }
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll)
+>>>>>>> 792ea92f4637d7ea1c573b004d53cc9bc3f740b8
+  }
 }
 </script>
 <style lang="less" scoped>
@@ -503,8 +451,14 @@ export default {
    top: -8px;
    z-index: 50;
    left: 65px;
-  background-image: url("./imgaes/13.png");
  }
+.pic12 {
+  z-index: 999;
+}
+.pic11 {
+  position: relative;
+  top: -180px;
+}
 .caruser .fllor5 ul li .pic2{
   background-size: 100%;
   background-position: center;
@@ -514,7 +468,6 @@ export default {
   top: -8px;
   z-index: 50;
   left: 65px;
-  background-image: url("./imgaes/15.png");
 }
 .caruser .fllor5 ul li .pic3{
   background-size: 100%;
@@ -525,7 +478,6 @@ export default {
   top: -8px;
   z-index: 50;
   left: 65px;
-  background-image: url("./imgaes/16.png");
 }
 .caruser .fllor5 ul li .content {
   border: 1px solid #E0DFDF;

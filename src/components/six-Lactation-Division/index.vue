@@ -35,9 +35,11 @@
   </div>
 </template>
 <script>
+import md5 from 'js-md5'
+import {leftList} from 'api/request'
 export default {
-  name: "Register",
-  data(){
+  name: 'Register',
+  data () {
     // <!--验证手机号是否合法-->
     let checkTel = (rule, value, callback) => {
       if (value === '') {
@@ -58,37 +60,37 @@ export default {
     }
     // <!--验证密码-->
     let validatePass = (rule, value, callback) => {
-      if (value === "") {
-        callback(new Error("请输入密码"))
+      if (value === '') {
+        callback(new Error('请输入密码'))
       } else {
-        if (this.ruleForm2.checkPass !== "") {
-          this.$refs.ruleForm2.validateField("checkPass");
+        if (this.ruleForm2.checkPass !== '') {
+          this.$refs.ruleForm2.validateField('checkPass')
         }
         callback()
       }
     }
     // <!--二次验证密码-->
     let validatePass2 = (rule, value, callback) => {
-      if (value === "") {
-        callback(new Error("请再次输入密码"));
+      if (value === '') {
+        callback(new Error('请再次输入密码'))
       } else if (value !== this.ruleForm2.pass) {
-        callback(new Error("两次输入密码不一致!"));
+        callback(new Error('两次输入密码不一致!'))
       } else {
-        callback();
+        callback()
       }
-    };
+    }
     return {
       ruleForm2: {
-        pass: "",
-        checkPass: "",
-        tel: "",
-        smscode: ""
+        pass: '',
+        checkPass: '',
+        tel: '',
+        smscode: ''
       },
       rules2: {
         pass: [{ validator: validatePass, trigger: 'change' }],
         checkPass: [{ validator: validatePass2, trigger: 'change' }],
         tel: [{ validator: checkTel, trigger: 'change' }],
-        smscode: [{ validator: checkSmscode, trigger: 'change' }],
+        smscode: [{ validator: checkSmscode, trigger: 'change' }]
       },
       buttonText: '发送验证码',
       isDisabled: false, // 是否禁止点击发送验证码按钮
@@ -99,21 +101,26 @@ export default {
     // <!--发送验证码-->
     sendCode () {
       let tel = this.ruleForm2.tel
+      leftList({
+        user_uphone: this.ruleForm2.tel
+      }, (res) => {
+        console.log(res)
+      })
       if (this.checkMobile(tel)) {
         console.log(tel)
         let time = 15
         this.buttonText = '已发送'
         this.isDisabled = true
         if (this.flag) {
-          this.flag = false;
+          this.flag = false
           let timer = setInterval(() => {
-            time--;
+            time--
             this.buttonText = time + ' 秒'
             if (time === 0) {
-              clearInterval(timer);
+              clearInterval(timer)
               this.buttonText = '重新获取'
               this.isDisabled = false
-              this.flag = true;
+              this.flag = true
             }
           }, 1000)
         }
@@ -121,33 +128,32 @@ export default {
     },
     // <!--提交注册-->
     submitForm (formName) {
+      // 表单是否通过验证
       this.$refs[formName].validate(valid => {
         if (valid) {
-          setTimeout(() => {
-            alert('注册成功')
-          }, 400);
+          console.log('注册成功')
         } else {
-          return false;
+          return false
         }
       })
     },
     // <!--进入登录页-->
-    gotoLogin() {
+    gotoLogin () {
       this.$router.push({
-        path: "/onminty"
-      });
+        path: '/onminty'
+      })
     },
     // 验证手机号
-    checkMobile(str) {
+    checkMobile (str) {
       let re = /^1\d{10}$/
       if (re.test(str)) {
-        return true;
+        return true
       } else {
-        return false;
+        return false
       }
     }
   }
-};
+}
 </script>
 <style scoped>
 .pigg{
@@ -163,7 +169,7 @@ background-image: url("./images/2.jpg");
 }
 #register {
   max-width: 340px;
-  margin: 0px auto;
+  margin: 0 auto;
   background: #fff;
   padding: 20px 40px;
   border-radius: 10px;

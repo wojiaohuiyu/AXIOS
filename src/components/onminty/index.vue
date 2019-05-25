@@ -8,7 +8,7 @@
     </div>
     <div class="pages">
       <el-row type="flex" justify="center" class="over">
-        <el-form ref="loginForm" :model="user" :rules="rules" status-icon label-width="80px" >
+        <el-form ref="loginForm" :model="user" :rules="rules" status-icon label-width="80px">
           <el-form-item label="用户名" prop="name">
             <el-input v-model="user.name"></el-input>
           </el-form-item>
@@ -16,7 +16,8 @@
             <el-input v-model="user.pass" type="password"></el-input>
           </el-form-item>
           <el-form-item>
-            <el-button type="primary" icon="el-icon-upload" @click="login">登录</el-button>
+            <el-button type="primary" icon="el-icon-upload" @click="login" class="pyte">登录</el-button>
+            <p class="logined" @click="gotoedLogin">么有账号？快去注册</p>
           </el-form-item>
         </el-form>
       </el-row>
@@ -26,6 +27,11 @@
 <script>
 export default {
   methods: {
+    gotoedLogin () {
+      this.$router.push({
+        path: '/sixz'
+      })
+    },
     login () {
       this.$refs.loginForm.validate((valid) => {
         if (valid) {
@@ -131,5 +137,17 @@ export default {
     &:hover{
       color: #E95513;
     }
+  }
+  .pyte{
+    width: 202px;
+  }
+  .logined{
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #1ab2ff;
+    cursor: pointer;
+    text-align: right;
+    text-indent: 8px;
   }
 </style>

@@ -1,241 +1,47 @@
 <template>
   <div class="bodycol">
     <div class="banersix">
-        <img src="~im/baomu_banner.jpg"/>
+        <img :src="api+bmbanner"/>
     </div>
     <div class="container">
       <el-row class="padding ks" :gutter="20">
-        <el-col class="background-colorw margin-t-30" :span="19"><div class="grid-content bg-purple">
-          <div class="value_list">
-            <h2 class="text-align-c padding-20">育儿嫂价值</h2>
-            <i class="title3"></i>
-          </div>
-          <div class="margin-t-20">
-            <ul class="baomu">
-              <li>非住家保姆</li>
-              <li><p>保洁+做饭</p><span>单休/双休</span></li>
-              <li><p>保洁+带小孩</p><span>单休/双休</span></li>
-              <li><p>保洁+照顾老人</p><span>单休/双休</span></li>
-            </ul>
-            <b class="schedule fl"></b>
-            <img class="fl anim_shake_image" src="~im/baomu1.png"/>
-            <div class="fr baomu-box">
-              <b class="schedule fl"></b>
-              <ul class="baomu baomuone">
-                <li>非住家保姆</li>
-                <li><p>保洁+做饭</p><span>单休/双休</span></li>
-                <li><p>保洁+带小孩</p><span>单休/双休</span></li>
-                <li><p>保洁+照顾老人</p><span>单休/双休</span></li>
-              </ul>
+        <el-col class="background-colorw margin-t-30" :span="19">
+            <div class="grid-content bg-purple">
+                <img :src="api+lrpoto" alt="">
             </div>
-            <div>
-            </div>
-          </div>
-        </div>
           </el-col>
         <!--侧边-->
-        <el-col class="padding" :span="5"><div class="grid-content bg-purple">
-          <Cebians></Cebians>
-        </div></el-col>
-        <el-col class="background-colorw" :span="19"><div class="grid-content bg-purple">
-          <div data-v-0a878338="" class="value_list"><h2 data-v-0a878338="" class="text-align-c margin-t-40 padding-20">服务价格</h2> <i data-v-0a878338="" class="title3"></i></div>
-          <div class="main-content text-align-c">
-            <table>
-              <tr>
-                <td style="width: 245px;">育婴师类别</td>
-                <td>育婴师级别</td>
-                <td>工资标准</td>
-                <td rowspan="16" onclick="toZiXun()">月收费按照实际工作26天计算。<br>（逢国家法定假日费用按国家规定计算）</td>
-              </tr>
-              <tr>
-                <td rowspan="7" onclick="toZiXun()">住家育婴师<sub>（26天）</sub></td>
-              </tr>
-              <tr>
-
-                <td rowspan="1" onclick="toZiXun()">金牌育婴师</td>
-                <td onclick="toZiXun()">10800元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">五星级育婴师</td>
-                <td onclick="toZiXun()">8800元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">四星级育婴师</td>
-                <td onclick="toZiXun()">7800元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">三星级育婴师</td>
-                <td onclick="toZiXun()">6800元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">二星级育婴师</td>
-                <td onclick="toZiXun()">6000元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">一星级育婴师</td>
-                <td onclick="toZiXun()">5380元/月</td>
-              </tr>
-
-              <tr>
-                <td rowspan="7" onclick="toZiXun()">非住家育婴师<sub>（26天）</sub></td>
-              </tr>
-              <tr>
-
-                <td rowspan="1" onclick="toZiXun()">金牌育婴师</td>
-                <td onclick="toZiXun()">10300元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">五星级育婴师</td>
-                <td onclick="toZiXun()">8300元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">四星级育婴师</td>
-                <td onclick="toZiXun()">7300元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">三星级育婴师</td>
-                <td onclick="toZiXun()">6400元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">二星级育婴师</td>
-                <td onclick="toZiXun()">5500元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">一星级育婴师</td>
-                <td onclick="toZiXun()">4880元/月</td>
-              </tr>
-            </table>
+        <el-col class="padding" :span="5">
+          <div class="grid-content bg-purple">
+              <Cebians></Cebians>
           </div>
-        </div>
-        </el-col>
-        <el-col class="background-colorw" :span="19"><div class="grid-content bg-purple">
-          <div data-v-0a878338="" class="value_list">
-            <h2 data-v-0a878338="" class="text-align-c margin-t-40 padding-20">质量保证</h2>
-            <i data-v-0a878338="" class="title3"></i>
-          </div>
-          <div class="icon-cent">
-            <ul class="clearfix">
-              <li class="li1">
-                <img src="~im/baomu-01.png"/>
-              </li>
-              <li class="li2">
-                <img src="~im/baomu-02.png"/>
-              </li>
-              <li class="li3">
-                <img src="~im/baomu-03.png"/>
-              </li>
-              <li class="li4">
-                <img src="~im/baomu-04.png"/>
-              </li>
-              <li class="li5">
-                <img src="~im/baomu-05.png"/>
-              </li>
-              <li class="li6">
-                <img src="~im/baomu-06.png"/>
-              </li>
-            </ul>
-            <div class="fr">
-              <img src="~im/baomu4.jpg"/>
-            </div>
-          </div>
-          </div>
-        </el-col>
-        <el-col class="background-colorw margin-b-30" :span="19"><div class="grid-content bg-purple">
-          <div data-v-0a878338="" class="value_list">
-            <h2 data-v-0a878338="" class="text-align-c margin-t-40 padding-20">质量保证</h2>
-            <i data-v-0a878338="" class="title3"></i>
-          </div>
-          <ul class="flow-box">
-            <li>
-              <div>
-                <em>
-                  <img class="img-two" src="~im/baomu7-w.png"/>
-                  <img class="img-one" src="~im/baomu7.png"/>
-                </em>
-                <p>家政顾问根据雇主要求拟定计划家政顾问根据雇主要求拟定计划</p>
-              </div>
-              <i class="flow-ico">I</i>
-            </li>
-            <li>
-              <div>
-                <em>
-                  <img class="img-two" src="~im/baomu7-w.png"/>
-                  <img class="img-one" src="~im/baomu7.png"/>
-                </em>
-                <p>家政顾问根据雇主要求拟定计划家政顾问根据雇主要求拟定计划</p>
-              </div>
-              <i class="flow-ico">I</i>
-            </li>
-            <li>
-              <div>
-                <em>
-                  <img class="img-two" src="~im/baomu7-w.png"/>
-                  <img class="img-one" src="~im/baomu7.png"/>
-                </em>
-                <p class="normal">在线预约</p>
-              </div>
-              <i class="flow-ico">I</i>
-            </li>
-            <li>
-              <div>
-                <em>
-                  <img class="img-two" src="~im/baomu7-w.png"/>
-                  <img class="img-one" src="~im/baomu7.png"/>
-                </em>
-                <p>在线预约</p>
-              </div>
-              <i class="flow-ico">I</i>
-            </li>
-            <li>
-              <div>
-                <em>
-                  <img class="img-two" src="~im/baomu7-w.png"/>
-                  <img class="img-one" src="~im/baomu7.png"/>
-                </em>
-                <p>在线预约</p>
-              </div>
-              <i class="flow-ico">I</i>
-            </li>
-            <li>
-              <div>
-                <em>
-                  <img class="img-two" src="~im/baomu7-w.png"/>
-                  <img class="img-one" src="~im/baomu7.png"/>
-                </em>
-                <p>在线预约</p>
-              </div>
-              <i class="flow-ico">I</i>
-            </li>
-            <li>
-              <div>
-                <em>
-                  <img class="img-two" src="~im/baomu7-w.png"/>
-                  <img class="img-one" src="~im/baomu7.png"/>
-                </em>
-                <p>在线预约</p>
-              </div>
-              <i class="flow-ico">I</i>
-            </li>
-            <li>
-              <div>
-                <em>
-                  <img class="img-one" src="~im/baomu7.png"/>
-                  <img class="img-two" src="~im/baomu7-w.png"/>
-                </em>
-                <p>在线预约</p>
-              </div>
-              <i class="flow-ico">I</i>
-            </li>
-          </ul>
-        </div>
         </el-col>
       </el-row>
     </div>
   </div>
 </template>
 <script>
+import {api} from 'api/index'
+import {bmList, bmlrList} from 'api/request'
 import Cebians from '../five-home-page/comcebian/index'
 export default {
+  data () {
+    return {
+      bmbanner: [],
+      lrpoto: [],
+      api
+    }
+  },
+  mounted () {
+    bmList((data) => {
+      this.bmbanner = data.paddress
+      console.log(this.bmbanner)
+    })
+    bmlrList((data) => {
+      this.lrpoto = data.img
+      console.log(this.lrpoto)
+    })
+  },
   components: {
     Cebians
   }

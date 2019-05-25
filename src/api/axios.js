@@ -12,7 +12,12 @@ function sendaxios (methods = 'post', url, data = {}) {
     let requesturl = api + url + '?' + qs.stringify(data)
     axios({
       methods: methods,
+<<<<<<< HEAD
       url: requesturl
+=======
+      url: api + url,
+      data: qs.stringify(data)
+>>>>>>> aa224effbb2f42b26a951bfdf452adfe1bee9878
     }).then((res) => {
       res = res.data
       resolve(res)

@@ -16,21 +16,37 @@
   </header>
 </template>
 <script>
+import {api, linkData} from 'api/index'
 import {viewList} from 'api/request'
+<<<<<<< HEAD
 import {linkData} from 'api/index'
+=======
+>>>>>>> aa224effbb2f42b26a951bfdf452adfe1bee9878
 export default {
   data () {
     return {
       lind: [],
       linkData,
+<<<<<<< HEAD
       banner: []
+=======
+      api
+>>>>>>> aa224effbb2f42b26a951bfdf452adfe1bee9878
     }
   },
   mounted () {
     viewList((data) => {
       this.lind = data[0].data
+<<<<<<< HEAD
+      console.log(data)
+=======
+      this.banner2 = data[0].data.paddress
 //      this.lind = data[0].data
 //      console.log(data)
+<<<<<<< HEAD
+=======
+>>>>>>> 792ea92f4637d7ea1c573b004d53cc9bc3f740b8
+>>>>>>> aa224effbb2f42b26a951bfdf452adfe1bee9878
     })
   }
 }
@@ -67,9 +83,6 @@ export default {
   }
   .mainnan li::after {
     border-right: @colordeep;
-  }
-  router-link {
-    color: red;
   }
   .router-link-exact-active .router-link-active{
     color: black;

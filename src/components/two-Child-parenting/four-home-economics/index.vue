@@ -51,198 +51,12 @@
       <div class="cleaned">
         <div class="cleared page">
           <div class="team repeat1" id="hy">
-            <div class="title">
-              <span>服务范围<b></b></span>
-            </div>
             <div class="infotxt">
               <ul class="leftd">
                 <li>
-                  <em><img src="./images/4.jpg"></em>
-                  <span>室内玻璃擦拭</span>
-                </li>
-                <li>
-                  <em><img src="./images/5.jpg"></em>
-                  <span>门框窗框</span>
-                </li>
-                <li>
-                  <em><img src="./images/6.jpg"></em>
-                  <span>物品分类归位</span>
-                </li>
-                <li>
-                  <em><img src="./images/7.jpg"></em>
-                  <span>家具除尘</span>
-                </li>
-                <li>
-                  <em><img src="./images/8.jpg"></em>
-                  <span>沙发地毯除尘</span>
-                </li>
-                <li>
-                  <em><img src="./images/9.jpg"></em>
-                  <span>墙体地面除尘除垢</span>
-                </li>
-                <li>
-                  <em><img src="./images/10.jpg"></em>
-                  <span>家用电器表面清洁</span>
-                </li>
-                <li>
-                  <em><img src="./images/11.jpg"></em>
-                  <span>厨卫台表面擦拭</span>
+                  <em><img :src="api + listsed"></em>
                 </li>
               </ul>
-              <div class="right">
-                <img src="./images/12.jpg">
-              </div>
-              <div class="clear"></div>
-            </div>
-            <i class="bot_icon"></i>
-          </div>
-          <div class="team repeat2">
-            <div class="title">
-              <span>服务范围<b></b></span>
-            </div>
-            <div class="infotxt">
-              <ul>
-                <li>
-                <i><img src="./images/14.jpg"></i>
-                <h3>三星级</h3>
-                <p>日常保洁<br><s>会员：50元/小时</s></p>
-                <em>VIP:<b>32元</b>/小时</em>
-                <span>
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                  </span>
-              </li>
-                <li>
-                  <i><img src="./images/16.jpg"></i>
-                  <h3>四星级</h3>
-                  <p>日常保洁<br><s>会员：55元/小时</s></p>
-                  <em>VIP:<b>36元</b>/小时</em>
-                  <span>
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                  </span>
-                </li>
-                <li>
-                  <i><img src="./images/17.jpg"></i>
-                  <h3>五星级</h3>
-                  <p>日常保洁<br><s>会员：60元/小时</s></p>
-                  <em>VIP:<b>45元</b>/小时</em>
-                  <span>
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                  </span>
-                </li>
-                <li>
-                  <i><img src="./images/18.jpg"></i>
-                  <h3>六星级</h3>
-                  <p>日常保洁<br><s>会员：65元/小时</s></p>
-                  <em>VIP:<b>55元</b>/小时</em>
-                  <span>
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                  </span>
-                </li>
-                <li>
-                  <i><img src="./images/19.jpg"></i>
-                  <h3>企业保洁</h3>
-                  <label>按日常保洁收取费
-                    用，另外每月总保洁费用的10%开票结算总价300元起步</label>
-                  <span>
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                    <img src="./images/15.png">
-                  </span>
-                </li>
-              </ul>
-              <br/>
-              <div class="clear"></div>
-              <p class="Docy">
-                立即加入VIP会员（<span style="color:red">100元</span>/年费）享受优惠服务
-              </p>
-            </div>
-            <i class="bot_icon"></i>
-          </div>
-          <div class="team repeat3">
-            <div class="title">
-              <span>参考耗时<b></b></span>
-            </div>
-            <div class="infotxt">
-              <img src="./images/20.jpg"/>
-              <table cellpadding="0" cellspacing="0">
-                <tbody><tr>
-                  <td class="td1">清理面积</td>
-                  <td>0-80平米</td>
-                  <td>80-100平米</td>
-                  <td>120-160平米</td>
-                  <td>160-200平米</td>
-                  <td class="last">&gt;200平米</td>
-                </tr>
-                <tr>
-                  <td class="td2">参考时间</td>
-                  <td>2H</td>
-                  <td>2-3H</td>
-                  <td>3-4H</td>
-                  <td>4-5H以上</td>
-                  <td class="last">5H以上</td>
-                </tr>
-                </tbody></table>
-              <div class="clear"></div>
-            </div>
-            <i class="bot_icon"></i>
-          </div>
-          <div class="team repeat4">
-            <div class="title"><span>服务标准<b></b></span></div>
-            <div class="infotxt">
-              <img src="./images/30.png">
-              <div class="clear"></div>
-            </div>
-            <i class="bot_icon"></i>
-          </div>
-          <div class="team repeat5">
-            <div class="title"><span>保洁师风采<b></b></span></div>
-            <div class="infotxt">
-              <ul class="ImgList">
-                <li>
-                  <em><a href="#">
-                    <img src="./images/21.jpg">
-                  </a></em>
-                  <span><b>赵家群|</b> 安徽</span>
-                  <i>46岁&nbsp;10年工作经验</i>
-                </li>
-                <li>
-                  <em><a href="#">
-                    <img src="./images/22.jpg">
-                  </a></em>
-                  <span><b>徐金梅||</b> 安徽</span>
-                  <i>47岁&nbsp;7年工作经验</i>
-                </li>
-                <li>
-                  <em><a href="#">
-                    <img src="./images/23.jpg">
-                  </a></em>
-                  <span><b>汪宗梅||</b>陕西</span>
-                  <i>39岁&nbsp;6年工作经验</i>
-                </li>
-                <li>
-                  <em><a href="#">
-                    <img src="./images/24.jpg">
-                  </a></em>
-                  <span><b>史桂兰||</b>扬州</span>
-                  <i>56岁&nbsp;7年工作经验</i>
-                </li>
-              </ul>
-              <div class="clear"></div>
             </div>
           </div>
         </div>
@@ -271,31 +85,39 @@
 import sursore1 from './images/1.jpg'
 import sursore2 from './images/1.jpg'
 import sursore3 from './images/1.jpg'
+import {rightList} from 'api/request'
+import {api} from 'api/index'
 export default {
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
+    rightList((img) => {
+      this.listsed = img[0].img
+      console.log(this.listsed)
+    })
   },
   methods: {
     handleScroll () {
       var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-      var offsetTop = document.querySelector('#searchBar').offsetTop;
-      var offsetTop = document.querySelector('#fixer').offsetTop;
-      if(scrollTop <= 631){
-        offsetTop = 631 - Number(scrollTop);
+      var offsetTop = document.querySelector('#searchBar').offsetTop
+      var offsetTop = document.querySelector('#fixer').offsetTop
+      if (scrollTop <= 631) {
+        offsetTop = 631 - Number(scrollTop)
         document.querySelector('#searchBar').style.top = offsetTop + 'px'
-        document.querySelector('#fixer').style.top = offsetTop + 'px';
-      }else{
-        document.querySelector('#searchBar').style.top = '0px';
-        document.querySelector('#fixer').style.top = '0px';
+        document.querySelector('#fixer').style.top = offsetTop + 'px'
+      } else {
+        document.querySelector('#searchBar').style.top = '0px'
+        document.querySelector('#fixer').style.top = '0px'
       }
-    },
+    }
   },
   destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
   },
   data () {
     return {
-      imglist: [sursore1,sursore2,sursore3]
+      imglist: [sursore1,sursore2,sursore3],
+      listsed: [],
+      api
     }
   }
 }
@@ -396,11 +218,10 @@ export default {
 }
 .cleared .team{
   margin-bottom: 30px;
-  background: #ffffff;
   position: relative;
 }
 .page .repeat1{
-  padding: 41px 0 49px;
+  padding: 0 0 49px;
 }
 .page .repeat1 .infotxt {
   padding: 46px 41px 0 21px;
@@ -435,7 +256,7 @@ export default {
 .cleared .team .leftd{
   float: left;
   overflow: hidden;
-  width: 648px;
+  width: 950px;
 }
 .cleared .team .leftd li{
   list-style: none;
@@ -446,10 +267,6 @@ export default {
 }
 .cleared .team .leftd li em{
 display: block;
-}
-.cleared .team .leftd li em img{
-  width: 97px;
-  height: 97px;
 }
 .cleared .team .leftd li span {
   display: block;
@@ -475,7 +292,7 @@ display: block;
   background: url(./images/13.jpg) no-repeat;
 }
 .cleared .team .infotxt {
-  padding: 75px 30px 38px;
+  padding: 0 0 38px;
   text-align: center;
 }
 /*服务价格*/
@@ -640,7 +457,7 @@ display: block;
 .fixed {
   position: fixed;
   top: 631px;
-  right: 60px;
+  right: 75px;
   box-sizing: border-box;
   z-index: 2;
   width: 240px;

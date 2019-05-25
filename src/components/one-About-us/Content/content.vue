@@ -1,8 +1,9 @@
 <template>
   <div>
     <div class="background-colorw content-t">
-      <div class="content-t-d">
-        <img src="../../../static/images/index-erweima.jpg" alt="">
+      <div>
+        <!--<img :src="api+banner" alt="" class="content-t-td">-->
+        <img  src="../../../static/images/content-tp1.jpg" class="content-t-td" alt="">
       </div>
       <div class="mainnan-dq">
         <div>
@@ -15,6 +16,9 @@
             <li v-for="(item,index) in list_city" :key="index"><a>{{item.cname}}</a></li>
           </ul>
         </div>
+      </div>
+      <div class="content-t-d">
+        <img src="../../../static/images/index-erweima.jpg" alt="">
       </div>
     </div>
     <div class="background-colorw container positop clearfix">
@@ -124,15 +128,14 @@
 </template>
 <script>
 import {api} from 'api/index'
-import {postList} from 'api/request'
-import {indexList} from 'api/request'
-import {indaiList} from 'api/request'
+import {postList, indexList, indaiList, viewList} from 'api/request'
 export default {
   data () {
     return {
       list_city: [],
       jzfwlist: [],
       list: [],
+      banner: [],
       api
     }
   },
@@ -149,6 +152,12 @@ export default {
       this.list = data.data
       console.log(this.list)
     })
+    viewList((data) => {
+      this.lind = data[0].data
+      this.banner = data[0].paddress
+//      this.lind = data[0].data
+      console.log(data[0].paddress)
+    })
   }
 }
 </script>
@@ -163,19 +172,27 @@ export default {
   }
   .content-t{
     position: relative;
-    top: -100px;
+    top: 0px;
+    left: 0px;
     width: 100%;
     height: 650px;
-    background: url("../../../static/images/content-tp1.jpg") no-repeat;
     background-size: 100%;
+    margin-bottom: 100px;
+  }
+  .content-t-td {
+    position: relative;
+    width: 100%;
+    top: -100px;
+    left: 0px;
   }
   .content-t-d{
     width: 300px;
-    position: relative;
-    top: 250px;
-    margin-left: 410px;
+    position: absolute;
+    top: 220px;
+    margin-left: 250px;
     border: 1px solid white;
     padding: 10px 5px 10px 0;
+    z-index: 9999;
   }
   .container-3 {
     display: block;
@@ -250,9 +267,9 @@ export default {
     }
   }
   .mainnan-dq {
-    position: relative;
-    margin-left: 100px;
-    margin-top: -100px;
+    position: absolute;
+    top: 0px;
+    left: 100px;
   }
   .mainnan-dq img{
     width: 20px;

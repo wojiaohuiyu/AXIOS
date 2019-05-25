@@ -264,7 +264,7 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
   @import "../../../static/css/commonality";
   .width-100{
     width: 100%;
@@ -273,36 +273,36 @@ export default {
   .el-tabs__item {
     border: 1px solid transparent;
   }
-  .el-tabs__item {
+ /deep/.el-tabs__item {
     width: 190px;
     height: 50px;
     line-height: 50px;
     text-align: left;
     margin-top: 2px;
   }
-  .el-tabs--left .el-tabs__item.is-left {
+  /deep/.el-tabs--left .el-tabs__item.is-left {
     text-align: left;
   }
-  .el-tabs__item:hover {
+  /deep/.el-tabs__item:hover {
     background: #003150;
     color: white;
   }
-  .el-tabs__item.is-active {
+  /deep/.el-tabs__item.is-active {
     background: #003150;
     color: white;
     padding-right: 100px;
   }
-  .el-tabs__active-bar {
+  /deep/.el-tabs__active-bar {
     background-color: transparent;
   }
-  .el-tabs__nav-wrap::after {
+  /deep/.el-tabs__nav-wrap::after {
     background-color: #1c2e53;
     border-right: #1c2e53;
   }
-  .el-tabs__nav-wrap {
+  /deep/.el-tabs__nav-wrap {
     overflow: visible;
   }
-  .el-tabs--left .el-tabs__nav-wrap.is-left::after, .el-tabs--left .el-tabs__nav-wrap.is-right::after, .el-tabs--right .el-tabs__nav-wrap.is-left::after, .el-tabs--right .el-tabs__nav-wrap.is-right::after{
+  /deep/.el-tabs--left .el-tabs__nav-wrap.is-left::after, .el-tabs--left .el-tabs__nav-wrap.is-right::after, .el-tabs--right .el-tabs__nav-wrap.is-left::after, .el-tabs--right .el-tabs__nav-wrap.is-right::after{
     margin-right: -70px;
     margin-top: 45px;
   }

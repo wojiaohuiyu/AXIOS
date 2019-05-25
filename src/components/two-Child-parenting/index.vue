@@ -37,8 +37,8 @@
           <li v-for="(item , index) in lists" :key="index" class="list1 fl">
             <div class="bg">
               <i></i>
-              <h6><router-link to="/two/page">{{item.name}}</router-link></h6>
-              <a href="#"><p>{{item.gender}}</p></a>
+              <a href="#"><p>{{item.hname}}</p></a>
+              <h6><router-link to="/two/page">{{item.hdescribe}}</router-link></h6>
               <a href="#" class="url uli"></a>
             </div>
           </li>
@@ -52,24 +52,22 @@
 import sursore1 from './images/1.jpg'
 import sursore2 from './images/1.jpg'
 import sursore3 from './images/1.jpg'
+import {paddList} from 'api/request'
 export default {
   data () {
     return {
-      bid:  '',
+      bid: [ ],
       imglist: [sursore1, sursore2, sursore3],
-      lists: [
-        {name: '日常保洁', gender: '钟点工/小时工/清洁护理'},
-        {name: '开荒保洁', gender: '新居开荒  装修硬装结束第一次保洁'},
-        {name: '大扫除', gender: '清除顽洉  适用长期未住、未彻底清洁房屋'},
-        {name: '家电清洗', gender: '全面清洗  去污防病菌'},
-        {name: '擦玻璃', gender: '专业清洗，明亮窗外色'},
-        {name: '搬家', gender: '优质服务  还您一个温馨的家'}
-      ]
+      lists: []
     }
   },
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
     this.bid = this.$route.query.bid
+    paddList((data) => {
+      this.lists = data[0].data
+      console.log(this.lists)
+    })
   },
   methods: {
     handleScroll () {
@@ -203,9 +201,14 @@ export default {
   margin-bottom: 10px;
 }
 .el-copy ul li h6 {
-  color: #FF7124;
+  color: #E95513;
   font-size: 20px;
   margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.el-copy ul li h6 a{
+  color: #E95513;
 }
 .el-copy ul li p {
   color: #555;
