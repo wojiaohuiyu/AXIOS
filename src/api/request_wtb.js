@@ -13,7 +13,6 @@ let Cuirbaner = function (callback) {
   })
 }
 export {
-  paddList,
   Cuir,
   Cuirbaner
 }

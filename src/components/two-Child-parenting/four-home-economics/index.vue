@@ -85,12 +85,12 @@
 import sursore1 from './images/1.jpg'
 import sursore2 from './images/1.jpg'
 import sursore3 from './images/1.jpg'
-import {rightList} from 'api/request_hy'
+import {rightedList} from 'api/request_hy'
 import {api} from 'api/index'
 export default {
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
-    rightList((img) => {
+    rightedList((img) => {
       this.listsed = img[0].img
       console.log(this.listsed)
     })

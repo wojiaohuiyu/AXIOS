@@ -48,7 +48,7 @@
   </div>
 </template>
 <script>
-import {rightedList} from 'api/request'
+import {rightedList} from 'api/request_hy'
 import {api} from 'api/index'
 import sursore1 from './images/1.jpg'
 import sursore2 from './images/1.jpg'

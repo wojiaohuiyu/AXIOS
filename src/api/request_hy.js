@@ -8,7 +8,7 @@ let paddList = function (callback) {
   })
 }
 // 家政二级
-let rightList = function (callback) {
+let rightedList = function (callback) {
   sendaxios('post', 'jsopnpic_queryID.action?hid=1').then((res) => {
     callback(res)
     console.log('4已经用回调函数callback')
@@ -44,7 +44,7 @@ let indexList = function (callback) {
 }
 export {
   paddList,
-  rightList,
+  rightedList,
   leftList,
   indexList,
   beefList,
