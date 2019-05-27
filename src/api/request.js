@@ -7,13 +7,6 @@ let postList = function (callback) {
     // console.log('已经用回调函数callback')
   })
 }
-// 家政二级
-let rightedList = function (callback) {
-  sendaxios('post', 'jsopnpic_queryID.action?hid=1').then((res) => {
-    callback(res)
-    console.log('4已经用回调函数callback')
-  })
-}
 // 顶部导航
 let viewList = function (callback) {
   sendaxios('post', 'jsopngen_querySy.action', {
@@ -26,4 +19,4 @@ let viewList = function (callback) {
 export {
   postList,
   viewList
-  viewList}
+}
