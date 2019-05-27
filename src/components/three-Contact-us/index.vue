@@ -3,7 +3,7 @@
 <div class="cotton">
   <!--走马灯-->
   <el-carousel height="480px">
-    <el-carousel-item v-for="(item , index) in imglist" :key="index">
+    <el-carousel-item>
       <img :src="api+banner" style="width: 100%;height: 100%; display: block;"/>
     </el-carousel-item>
   </el-carousel>
@@ -17,7 +17,8 @@
           </li>
         </ul>
       <div>
-        <img :src="api+tonet">
+
+        <img :src="api+tonet" alt="">
       </div>
       <div class="fllor5">
         <div class="title1">
@@ -107,33 +108,17 @@
 </template>
 <script>
 import {api} from 'api/index'
-import {viewysList, yslrList, ysxxList} from 'api/request'
+import {viewysList, yslrList, ysxxList} from 'api/ctx'
 import sursore1 from './imgaes/17.jpg'
 import sursore2 from './imgaes/18.jpg'
 export default {
-  methods: {
-    handleScroll () {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-      var offsetTop = document.querySelector('#searchBar').offsetTop
-      if (scrollTop <= 600) {
-        offsetTop = 600 - Number(scrollTop)
-        document.querySelector('#searchBar').style.top = offsetTop + 'px'
-      } else {
-        document.querySelector('#searchBar').style.top = '0px'
-      }
-    }
-  },
-  destroyed () {
-    window.removeEventListener('scroll', this.handleScroll)
-  },
   data () {
     return {
       banner: [],
       tonet: [],
       lists: [],
       imgs: [],
-      api,
-      imglist: [sursore1, sursore2]
+      api
     }
   },
   mounted () {
@@ -149,9 +134,9 @@ export default {
       this.lists = data.data
       this.imgs = data.data
       console.log(this.lists)
-      console.log(this.imgs)
     })
     window.addEventListener('scroll', this.handleScroll)
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>

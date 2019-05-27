@@ -23,6 +23,7 @@ export default {
     return {
       lind: [],
       linkData,
+      banner: [],
       api
     }
   },

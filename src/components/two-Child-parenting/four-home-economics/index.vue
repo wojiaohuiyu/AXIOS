@@ -85,7 +85,7 @@
 import sursore1 from './images/1.jpg'
 import sursore2 from './images/1.jpg'
 import sursore3 from './images/1.jpg'
-import {rightList} from 'api/request'
+import {rightList} from 'api/request_hy'
 import {api} from 'api/index'
 export default {
   mounted () {
