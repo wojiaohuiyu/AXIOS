@@ -89,8 +89,9 @@ export default {
       this.list = data.data
     })
     viewysList((data) => {
-      this.lind = data.data
-      console.log(data)
+      this.lind = data[0].data
+      this.banner = data[0].paddress
+      console.log(this.banner)
     })
   }
 }

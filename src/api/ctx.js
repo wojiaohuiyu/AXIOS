@@ -84,6 +84,12 @@ let yesbcont = function (callback) {
     console.log('已经用回调函数callback')
   })
 }
+let postSub = function (callback) {
+  sendaxios('post', 'jsopnpic_queryImg.action').then((res) => {
+    callback(res)
+    console.log('已经用回调函数callback')
+  })
+}
 export {
   postUser,
   indexList,
@@ -96,5 +102,6 @@ export {
   bmList,
   bmlrList,
   yesbanner,
-  yesbcont
+  yesbcont,
+  postSub
 }

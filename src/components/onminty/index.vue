@@ -28,88 +28,88 @@
   </div>
 </template>
 <script>
-import {beefList} from 'api/request_hy'
-export default {
-  data () {
-    var phone = (rule, value, callback) => {
-      if (!value) {
-        return callback(new Error('账号错误'))
-      } else {
-        var reg = /^1[34578]\d{9}$/
-        if (reg.test(value) === false) {
-          return callback(new Error('请输入正确的账号'))
+  import {beefList} from 'api/request_hy'
+  export default {
+    data () {
+      var phone = (rule, value, callback) => {
+        if (!value) {
+          return callback(new Error('账号错误'))
         } else {
+          var reg = /^1[34578]\d{9}$/
+          if (reg.test(value) === false) {
+            return callback(new Error('请输入正确的账号'))
+          } else {
+            callback()
+          }
+        }
+      }
+      var validatePass = (rule, value, callback) => {
+        if (value === '') {
+          callback(new Error('请输入密码'))
+        } else {
+          if (this.ruleForm.checkPass !== '') {
+            this.$refs.ruleForm.validateField('checkPass')
+          }
           callback()
         }
       }
-    }
-    var validatePass = (rule, value, callback) => {
-      if (value === '') {
-        callback(new Error('请输入密码'))
-      } else {
-        if (this.ruleForm.checkPass !== '') {
-          this.$refs.ruleForm.validateField('checkPass')
+      return {
+        ruleForm: {
+          msg: '',
+          pass: '',
+          phone: ''
+        },
+        activeName: 'second',
+        rules: {
+          pass: [
+            { validator: validatePass, trigger: 'blur' }
+          ],
+          phone: [
+            { validator: phone, trigger: 'blur' }
+          ]
         }
-        callback()
       }
-    }
-    return {
-      ruleForm: {
-        msg: '',
-        pass: '',
-        phone: ''
+    },
+    methods: {
+      submitForm (ruleForm) {
+        // 手机
+        // let phone = this.ruleForm.phone
+        // 密码
+        // let pwd = this.ruleForm.pass
+        // if (phone !== '' && pwd !== '' && pic === '验证成功') {
+        //   console.log(111)
+        // }
+        this.$refs[ruleForm].validate((valid) => {
+          if (valid) {
+            beefList({
+              'useruphone': this.ruleForm.phone,
+              'userupassword': this.ruleForm.pass
+            }, (res) => {
+              console.log(res)
+              alert(res.message)
+              window.localStorage.setItem('token',res.success)
+              window.localStorage.setItem('user',JSON.stringify(res.telphone))
+              // 跳转到首页
+              if (res.success === true) {
+                this.$router.push({path: '/eight'})
+              }
+            })
+          } else {
+            return false
+          }
+        })
       },
-      activeName: 'second',
-      rules: {
-        pass: [
-          { validator: validatePass, trigger: 'blur' }
-        ],
-        phone: [
-          { validator: phone, trigger: 'blur' }
-        ]
+      onSuccess () {
+        this.ruleForm.msg = '验证成功'
+      },
+      onFail () {
+        this.ruleForm.msg = '验证失败，请重新验证'
+      },
+      onRefresh () {
+        this.ruleForm.msg = '已刷新'
       }
-    }
-  },
-  methods: {
-    submitForm (ruleForm) {
-      // 手机
-      // let phone = this.ruleForm.phone
-      // 密码
-      // let pwd = this.ruleForm.pass
-      // if (phone !== '' && pwd !== '' && pic === '验证成功') {
-      //   console.log(111)
-      // }
-      this.$refs[ruleForm].validate((valid) => {
-        if (valid) {
-          beefList({
-            'useruphone': this.ruleForm.phone,
-            'userupassword': this.ruleForm.pass
-          }, (res) => {
-            console.log(res)
-            alert(res.message)
-            window.localStorage.setItem('token',res.success)
-            window.localStorage.setItem('user',JSON.stringify(res.telphone))
-            // 跳转到首页
-            if (res.success === true) {
-              this.$router.push({path: '/eight'})
-            }
-          })
-        } else {
-          return false
-        }
-      })
-    },
-    onSuccess () {
-      this.ruleForm.msg = '验证成功'
-    },
-    onFail () {
-      this.ruleForm.msg = '验证失败，请重新验证'
-    },
-    onRefresh () {
-      this.ruleForm.msg = '已刷新'
     }
   }
-}
 </script>
 <style lang="less" scoped>
   .header{

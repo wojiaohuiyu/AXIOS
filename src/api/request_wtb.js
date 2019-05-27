@@ -1,12 +1,19 @@
 import sendaxios from './axios'
 
-// 家政内容
-let paddList = function (callback) {
-  sendaxios('post', 'House_query.action').then((res) => {
+let Cuir = function (callback) {
+  sendaxios('post', 'CUI_cuirushiServe.action', {'cuirushi_id': 2}).then((res) => {
     callback(res)
-    console.log('3已经用回调函数callback')
+    // console.log('已经用回调函数callback')
+  })
+}
+//  催乳师baner大图
+let Cuirbaner = function (callback) {
+  sendaxios('post', 'CUI_cuirushiPage.action', {'general_id': 4}).then((res) => {
+    callback(res)
   })
 }
 export {
-  paddList
+  paddList,
+  Cuir,
+  Cuirbaner
 }

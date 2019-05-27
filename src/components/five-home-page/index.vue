@@ -1,200 +1,21 @@
 <template>
   <div class="bodycol">
       <div class="banner-five">
-        <img src="~im/banner5.jpg">
+        <img :src="api+Yuebaner">
       </div>
     <div class="container">
       <el-row class="padding ks" :gutter="20">
         <el-col :span="19" class="background-colorw margin-t-30">
           <div>
-            <img src="" alt="">
+            <img :src="api+YueConet" alt="">
           </div>
         </el-col>
         <!--侧边-->
-        <el-col class="padding" :span="5"><div class="grid-content bg-purple">
+        <el-col class="padding" :span="5">
+          <div class="grid-content bg-purple">
           <Cebians></Cebians>
-        </div></el-col>
-        <el-col :span="19" class="background-colorw"><div class="grid-content bg-purple">
-          <div class="value_list">
-            <h2>服务内容</h2>
-          </div>
-          <div class="content_list clearfix">
-             <div class="fl shades">
-               <img src="~im/girl.jpg">
-             </div>
-            <ul class="fr banef-ul">
-              <li>
-                <div class="cont">
-                  <div class="cont-one">1、婴儿喂养、添加辅食、营养合理搭配婴儿喂养婴儿喂养婴儿喂养婴儿喂养婴儿喂养</div>
-                  <p>2、口腔护理、臀部护理、尿布疹的预防及护理</p>
-                  <p>3、婴儿衣服、奶具、餐具、玩具的清洗消毒</p>
-                  <p>4、婴儿房间的整理保洁</p>
-                </div>
-              </li>
-              <li>
-                <div class="cont">
-                  <div class="cont-one">1、婴儿喂养、添加辅食、营养合理搭配婴儿喂养婴儿喂养婴儿喂养婴儿喂养婴儿喂养</div>
-                  <p>2、口腔护理、臀部护理、尿布疹的预防及护理</p>
-                  <p>3、婴儿衣服、奶具、餐具、玩具的清洗消毒</p>
-                  <p>4、婴儿房间的整理保洁</p>
-                </div>
-              </li>
-              <li>
-                <div class="cont">
-                  <div class="cont-one">1、婴儿喂养、添加辅食、营养合理搭配婴儿喂养婴儿喂养婴儿喂养婴儿喂养婴儿喂养</div>
-                  <p>2、口腔护理、臀部护理、尿布疹的预防及护理</p>
-                  <p>3、婴儿衣服、奶具、餐具、玩具的清洗消毒</p>
-                  <p>4、婴儿房间的整理保洁</p>
-                </div>
-              </li>
-              <li>
-                <div class="cont">
-                  <div class="cont-one">1、婴儿喂养、添加辅食、营养合理搭配婴儿喂养婴儿喂养婴儿喂养婴儿喂养婴儿喂养</div>
-                  <p>2、口腔护理、臀部护理、尿布疹的预防及护理</p>
-                  <p>3、婴儿衣服、奶具、餐具、玩具的清洗消毒</p>
-                  <p>4、婴儿房间的整理保洁</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div></el-col>
-        <el-col :span="19" class="background-colorw"><div class="grid-content bg-purple">
-          <div class="value_list">
-            <h2>服务价格</h2>
-          </div>
-          <div class="text-align-c margin-b-40">
-            <img src="~im/prices.jpg">
-          </div>
-          <div class="main-content text-align-c">
-            <table>
-              <tr>
-                <td style="width: 245px;">育婴师类别</td>
-                <td>育婴师级别</td>
-                <td>工资标准</td>
-                <td rowspan="16" onclick="toZiXun()">月收费按照实际工作26天计算。<br>（逢国家法定假日费用按国家规定计算）</td>
-              </tr>
-              <tr>
-                <td rowspan="7" onclick="toZiXun()">住家育婴师<sub>（26天）</sub></td>
-              </tr>
-              <tr>
-
-                <td rowspan="1" onclick="toZiXun()">金牌育婴师</td>
-                <td onclick="toZiXun()">10800元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">五星级育婴师</td>
-                <td onclick="toZiXun()">8800元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">四星级育婴师</td>
-                <td onclick="toZiXun()">7800元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">三星级育婴师</td>
-                <td onclick="toZiXun()">6800元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">二星级育婴师</td>
-                <td onclick="toZiXun()">6000元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">一星级育婴师</td>
-                <td onclick="toZiXun()">5380元/月</td>
-              </tr>
-
-              <tr>
-                <td rowspan="7" onclick="toZiXun()">非住家育婴师<sub>（26天）</sub></td>
-              </tr>
-              <tr>
-
-                <td rowspan="1" onclick="toZiXun()">金牌育婴师</td>
-                <td onclick="toZiXun()">10300元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">五星级育婴师</td>
-                <td onclick="toZiXun()">8300元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">四星级育婴师</td>
-                <td onclick="toZiXun()">7300元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">三星级育婴师</td>
-                <td onclick="toZiXun()">6400元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">二星级育婴师</td>
-                <td onclick="toZiXun()">5500元/月</td>
-              </tr>
-              <tr>
-                <td rowspan="1" onclick="toZiXun()">一星级育婴师</td>
-                <td onclick="toZiXun()">4880元/月</td>
-              </tr>
-            </table>
-          </div>
-        </div></el-col>
-        <!--品质保障-->
-        <el-col :span="19" class="background-colorw margin-b-30"><div class="grid-content bg-purple">
-          <div class="value_list">
-            <h2>品质保障</h2>
-          </div>
-          <div class="product_list">
-            <ul>
-              <li>
-                <div class="pre">
-                  <em>
-                    <img src="~im/product_01.jpg">
-                  </em>
-                  <h5>员工制：放心</h5>
-                </div>
-                <div class="explain text-align-c">
-                  <p>为用户提供</p>
-                  <p>100万人身＋物</p>
-                  <p>品保障的服务机构</p>
-                </div>
-              </li>
-              <li>
-                <div class="pre">
-                  <em>
-                    <img src="~im/product_01.jpg">
-                  </em>
-                  <h5>员工制：放心</h5>
-                </div>
-                <div class="explain text-align-c">
-                  <p>为用户提供</p>
-                  <p>100万人身＋物</p>
-                  <p>品保障的服务机构</p>
-                </div>
-              </li>
-              <li>
-                <div class="pre">
-                  <em>
-                    <img src="~im/product_01.jpg">
-                  </em>
-                  <h5>员工制：放心</h5>
-                </div>
-                <div class="explain text-align-c">
-                  <p>为用户提供</p>
-                  <p>100万人身＋物</p>
-                  <p>品保障的服务机构</p>
-                </div>
-              </li>
-              <li>
-                <div class="pre">
-                  <em>
-                    <img src="~im/product_01.jpg">
-                  </em>
-                  <h5>员工制：放心</h5>
-                </div>
-                <div class="explain text-align-c">
-                  <p>为用户提供</p>
-                  <p>100万人身＋物</p>
-                  <p>品保障的服务机构</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div></el-col>
+        </div>
+        </el-col>
       </el-row>
     </div>
   </div>
@@ -216,12 +37,12 @@ export default {
   },
   mounted () {
     yesbanner((data) => {
-      this.Yuebaner = data
+      this.Yuebaner = data.paddress
       console.log('育儿嫂')
       console.log(this.Yuebaner)
     })
     yesbcont((data) => {
-      this.YueConet = data
+      this.YueConet = data.paddress
       console.log('育儿嫂图片')
       console.log(this.YueConet)
     })

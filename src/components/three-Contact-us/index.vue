@@ -17,6 +17,7 @@
           </li>
         </ul>
       <div>
+
         <img :src="api+tonet" alt="">
       </div>
       <div class="fllor5">
@@ -111,34 +112,13 @@ import {viewysList, yslrList, ysxxList} from 'api/ctx'
 import sursore1 from './imgaes/17.jpg'
 import sursore2 from './imgaes/18.jpg'
 export default {
-  mounted () {
-    window. addEventListener('scroll', this.handleScroll)
-  },
-  methods: {
-    handleScroll () {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-      var offsetTop = document.querySelector('#searchBar').offsetTop;
-      if(scrollTop <= 600){
-        offsetTop = 600 - Number(scrollTop);
-        document.querySelector('#searchBar').style.top = offsetTop + 'px';
-      }else{
-        document.querySelector('#searchBar').style.top = '0px';
-      }
-    }
-  },
-  destroyed () {
-    window.removeEventListener('scroll', this.handleScroll)
-  },
   data () {
     return {
-    }
       banner: [],
       tonet: [],
       lists: [],
       imgs: [],
-      imglist: [sursore1, sursore2],
-      api,
-      imglist: [sursore1, sursore2],
+      api
     }
   },
   mounted () {
@@ -154,30 +134,15 @@ export default {
       this.lists = data.data
       this.imgs = data.data
       console.log(this.lists)
-      console.log(this.imgs)
     })
     window.addEventListener('scroll', this.handleScroll)
-  },
-  methods: {
-    handleScroll () {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-      var offsetTop = document.querySelector('#searchBar').offsetTop
-      if (scrollTop <= 600) {
-        offsetTop = 600 - Number(scrollTop)
-        document.querySelector('#searchBar').style.top = offsetTop + 'px'
-      } else {
-        document.querySelector('#searchBar').style.top = '0px'
-      }
-    }
-  },
-  destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
 <style lang="less" scoped>
 .cotton{
-  margin: 0px auto 20px;
+  margin: 0 auto 20px;
   position: relative;
   width: 100%;
   overflow: hidden;

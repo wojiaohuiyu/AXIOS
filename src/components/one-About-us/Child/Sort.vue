@@ -195,6 +195,7 @@
   </div>
 </template>
 <script>
+import {postSub} from 'api/ctx'
 export default {
   data () {
     return {
@@ -230,8 +231,15 @@ export default {
         }]
       },
       value1: '',
-      value2: ''
+      value2: '',
+      subl: []
     }
+  },
+  mounted () {
+    postSub((data) => {
+      this.subl = data
+      console.log(this.subl)
+    })
   },
   methods: {
     handleClick (tab, event) {

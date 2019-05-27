@@ -4,20 +4,51 @@
       <el-tab-pane label="我的账户">
         <div class="personal-l-200 f-weight-400">
           <div class="margin-l-30 t-f-40">我的账户</div>
-          <div class="margin-t-40 hs-666">
+          <div class="margin-t-40">
             <div class="t-f-26">
-              <span >婴婴婴</span>
-              <span>您好</span>
+              <span class="" v-for="(list, index) in lists" :key="index">
+                {{list.name}}
+              </span>
+              <span class="hs-666">您好</span>
             </div>
             <div class="margin-t-10 margin-l-5">您好 您可在我的账户中追踪订单信息，修改我的账户信息，管理配送地址信息以及咨询心愿清单中的表款信息。</div>
           </div>
           <div class="margin-t-40 clearfix">
             <div class="personal-3 t-f-18 f-weight-600">账户信息</div>
-            <div class="margin-l-50 margin-t-30">
-              <div class="t-f-18 f-weight-600">婴婴婴</div>
-              <div class="t-f-16">d11ed29381f9c262@longines.cn</div>
+            <div class="margin-l-50 margin-t-30 t-f-18">
+              <div>
+                <span v-for="(li, index) in lists" :key="index" class="width150">
+                  <span>呢称：</span>
+                  <span class="t-f-20">{{li.nam}}</span>
+                </span>
+                <span v-for="(lis, index) in lists" :key="index" class=" margin-l-70 t-f-18">
+                  <span>手机号:</span> {{lis.name}}
+                </span>
+              </div>
+              <div class="margin-t-10">
+                <span v-for="(li, index) in lists" :key="index" class="width150">
+                  <span>会员ID：</span>
+                  <span class="t-f-20">{{li.id}}</span>
+                </span>
+                <span v-for="(lis, index) in lists" :key="index" class=" margin-l-70 t-f-18">
+                  <span>E-mail:</span> {{lis.emil}}
+                </span>
+              </div>
+              <div>
+                <span v-for="(li, index) in lists" :key="index" class="margin-t-10 width150 t-f-16">
+                  <span>年龄：</span>
+                  <span>{{li.sex}}</span>
+                </span>
+                <span v-for="(li, index) in lists" :key="index" class="margin-l-70 t-f-16">
+                  <span>性别：</span>
+                  <span>{{li.age}}</span>
+                </span>
+              </div>
             </div>
-            <div class="fr margin-r-50"><a class="cursor">编辑信息</a></div>
+            <div class="fr margin-r-50">
+              <el-tab-pane label="账户信息"></el-tab-pane>
+              <a class="cursor">编辑信息</a>
+            </div>
           </div>
           <div class="margin-t-50 clearfix">
             <div class="personal-3 t-f-18 f-weight-600">配送地址</div>
@@ -269,11 +300,21 @@ export default {
       this.user_a = data
       console.log(this.user_a)
     })
+  },
+  computed: {
+    lists: function () {
+      console.log(this.$store)
+      return this.$store.state.index.lists
+    }
   }
 }
 </script>
 <style lang="less" scoped>
   @import "../../../static/css/commonality";
+  .width150{
+    width: 150px;
+    display: inline-block;
+  }
   .width-100{
     width: 100%;
     height: 100px;

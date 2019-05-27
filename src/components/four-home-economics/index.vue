@@ -47,7 +47,7 @@
               <p>吴老师38岁 <img src="~im/rcbj-list-star.png"><img src="~im/rcbj-list-star.png"><img src="~im/rcbj-list-star.png"><img src="~im/rcbj-list-star.png"><img src="~im/rcbj-list-star.png"></p>
               <p class="margin-t-10">7年工作经验</p>
               <p>
-                可以上岗    已上保险</p>
+                可以上岗已上保险</p>
             </span>
             <p class="pic-span">
               <a class="ic-box" href="javascript:;">
@@ -86,7 +86,7 @@
 </template>
 <script>
 import {api} from 'api/index'
-import {Cuir, Cuirbaner} from 'api/request'
+import {Cuir, Cuirbaner} from 'api/request_wtb'
 import Cebiian from './cebian/index.vue'
 export default {
   data () {
@@ -110,7 +110,6 @@ export default {
       this.listconent = data.data
     })
   }
-
 }
 </script>
 <style lang="less" scoped>
