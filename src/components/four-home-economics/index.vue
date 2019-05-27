@@ -1,8 +1,7 @@
 <template>
   <div class="bodycol">
     <div class="banner-four">
-    <!--<img src="~im/cuiru-banner.jpg">-->
-    <img :src="api+listbaner">
+    <img :src="api+listbaner" alt="小弟正在加载中.....">
     </div>
       <div class="question background-colorwhite margin-b-60 colordeep">
         <h3 class="f-weight-700">您是否对催乳师感到疑惑？</h3>
@@ -12,253 +11,12 @@
     <div class="container clearfix">
     <el-row :gutter="20" class="margin-t-40">
       <el-col class="margin-b-50 background-colorw" :span="18"><div class="grid-content bg-purple">
-        <img :src="api+listimg">
-        <div class="content-box">
-          <h2 class="text-align-c hr">
-            <span>服务内容</span>
-          </h2>
-        </div>
-        <!--element切换-->
-        <el-tabs v-model="activeName">
-          <el-tab-pane label="母乳哺育" name="first">
-            <ul class="clearfix" name="nav" data-herf='1'>
-              <li class="one">
-                <div class="ul-boxContent">
-                  <b>01</b>
-                  <p>开奶</p>
-                  <span >催乳师通过专业知识和技能帮助产妇建立泌乳反射的过程。</span>
-                  <i></i>
-                  <em></em>
-                  <div class="border-bot"></div>
-                </div>
-              </li>
-              <li class="one">
-                <div class="ul-boxContent">
-                  <b>01</b>
-                  <p>开奶</p>
-                  <span >催乳师通过专业知识和技能帮助产妇建立泌乳反射的过程。</span>
-                  <i></i>
-                  <em></em>
-                  <div class="border-bot"></div>
-                </div>
-              </li>
-              <li class="one">
-                <div class="ul-boxContent">
-                  <b>01</b>
-                  <p>开奶</p>
-                  <span >催乳师通过专业知识和技能帮助产妇建立泌乳反射的过程。</span>
-                  <i></i>
-                  <em></em>
-                  <div class="border-bot"></div>
-                </div>
-              </li>
-              <li class="one">
-                <div class="ul-boxContent">
-                  <b>01</b>
-                  <p>开奶</p>
-                  <span >催乳师通过专业知识和技能帮助产妇建立泌乳反射的过程。</span>
-                  <i></i>
-                  <em></em>
-                  <div class="border-bot"></div>
-                </div>
-              </li>
-              <li class="one">
-                <div class="ul-boxContent">
-                  <b>01</b>
-                  <p>开奶</p>
-                  <span >催乳师通过专业知识和技能帮助产妇建立泌乳反射的过程。</span>
-                  <i></i>
-                  <em></em>
-                  <div class="border-bot"></div>
-                </div>
-              </li>
-            </ul>
-          </el-tab-pane>
-          <el-tab-pane label="乳腺护理" name="second">
-            <!--影藏-->
-            <ul class="clearfix ul-two" name="nav" data-herf='2'>
-              <li class="one">
-                <div class="ul-boxContent">
-                  <b>01</b>
-                  <p>科学无痛回奶</p>
-                  <span >通过催乳师无痛回奶手法和饮食指导使婴儿断奶后让乳房不再分泌乳汁，使乳房更加健康。</span>
-                  <i></i>
-                  <em></em>
-                  <div class="border-bot"></div>
-                </div>
-              </li>
-              <li class="one">
-                <div class="ul-boxContent">
-                  <b>02</b>
-                  <p>哺乳期乳腺养护</p>
-                  <span >通过催乳师无痛回奶手法和饮食指导使婴儿断奶后让乳房不再分泌乳汁，使乳房更加健康。</span>
-                  <i></i>
-                  <em></em>
-                  <div class="border-bot"></div>
-                </div>
-              </li>
-              <li class="one">
-                <div class="ul-boxContent">
-                  <b>03</b>
-                  <p>哺乳期小叶增生调理</p>
-                  <span >通过催乳师相应的手法操作及哺乳科学知识指导最大限度的解决哺乳期小叶增生问题。。</span>
-                  <i></i>
-                  <em></em>
-                  <div class="border-bot"></div>
-                </div>
-              </li>
-              <li class="one">
-                <div class="ul-boxContent">
-                  <b>04</b>
-                  <p>开奶</p>
-                  <span >催乳师通过专业知识和技能帮助产妇建立泌乳反射的过程。</span>
-                  <i></i>
-                  <em></em>
-                  <div class="border-bot"></div>
-                </div>
-              </li>
-              <li class="one">
-                <div class="ul-boxContent">
-                  <b>05</b>
-                  <p>开奶</p>
-                  <span >催乳师通过专业知识和技能帮助产妇建立泌乳反射的过程。</span>
-                  <i></i>
-                  <em></em>
-                  <div class="border-bot"></div>
-                </div>
-              </li>
-            </ul>
-          </el-tab-pane>
-        </el-tabs>
+        <img :src="api+listimg" alt="正在加载中....">
       </div></el-col>
       <!--侧边导航-->
       <el-col :span="5"><div class="grid-content bg-purple">
         <Cebiian></Cebiian>
       </div></el-col>
-      <el-col class="background-colorw" :span="18"><div class="grid-content bg-purple margin-b-50">
-        <div class="content-box">
-          <h2 class="text-align-c hr">
-            <span>服务价格</span>
-          </h2>
-        </div>
-            <table class="table" cellpadding="0" cellspacing="0">
-              <table class="table" cellpadding="0" cellspacing="0">
-                <tr class="colordeep tr-hrd text-align-c">
-                  <td class="trs trbor"></td>
-                  <td>类型</td>
-                  <td>价格</td>
-                  <td>套餐</td>
-                  <td class="trw">赠送项目</td>
-                </tr>
-              </table>
-              <table class="table">
-                <tr class="colordeep text-align-c">
-                  <td class="trs trbor">催乳</td>
-                  <td class="trts">单次</td>
-                  <td class="rd_bg">600元/次</td>
-                  <td class="trs">1200元/3次<br>1500元/5次</td>
-                  <td class="trw rd_bg"></td>
-                </tr>
-                <tr class="colordeep text-align-c">
-                  <td class="trs trbor">开奶</td>
-                  <td>单次</td>
-                  <td class="rd_bg">600元/次</td>
-                  <td class="trs">1200元/3次
-                    <br>1500元/5次</td>
-                  <td class="trw rd_bg"></td>
-                </tr>
-                <tr class="colordeep text-align-c">
-                  <td class="trs trbor">少奶</td>
-                  <td>套餐</td>
-                  <td class="rd_bg"><p>第一疗程</p><p>第一疗程</p><p>第一疗程</p></td>
-                  <td class="trs"><p>1200元/3次</p><p>1200元/3次</p><p>1200元/3次</p></td>
-                  <td class="trw rd_bg">
-                  <div>做满两个疗程：减100并赠送乳腺养护1次</div>
-                  <div>做满三个疗程：减200并赠送乳腺养护1次</div>
-                </td>
-                </tr>
-                <tr class="colordeep text-align-c">
-                  <td rowspan="2" class="trs trbor">乳房肿胀</td>
-                  <td>类型</td>
-                  <td class="rd_bg">价格</td>
-                  <td class="trs">1200元/3次<br>1500元/5次</td>
-                  <td class="trw rd_bg"></td>
-                </tr>
-                <tr class="colordeep text-align-c">
-                  <td>类型</td>
-                  <td class="rd_bg">价格</td>
-                  <td class="trs">1200元/3次<br>1500元/5次</td>
-                  <td class="trw rd_bg">
-                    <p>做满两个疗程：减100并赠送乳腺养护1次</p>
-                  </td>
-                </tr>
-                <tr class="colordeep text-align-c">
-                  <td rowspan="2" class="trs trbor">乳房肿胀</td>
-                  <td>类型</td>
-                  <td class="rd_bg">价格</td>
-                  <td class="trs">1200元/3次<br>1500元/5次</td>
-                  <td class="trw rd_bg"></td>
-                </tr>
-                <tr class="colordeep text-align-c">
-                  <td>类型</td>
-                  <td class="rd_bg">价格</td>
-                  <td class="trs">1200元/3次<br>1500元/5次</td>
-                  <td class="trw rd_bg">
-                    <p>做满两个疗程：减100并赠送乳腺养护1次</p>
-                  </td>
-                </tr>
-                <!--多格-->
-                <tr class="colordeep text-align-c">
-                  <td class="trs trbor">哺乳期乳腺养护<hr>哺乳期小叶增生<br>调理<hr>哺乳期乳房外形<br>调整<hr>深度乳腺管疏通</td>
-                  <td class="trts">单次</td>
-                  <td class="rd_bg">600元/次</td>
-                  <td class="trs">1200元/3次<br>1500元/5次</td>
-                  <td class="trw rd_bg"></td>
-                </tr>
-                <tr class="colordeep text-align-c">
-                  <td class="trss trbor">催乳</td>
-                  <td class="trts">单次</td>
-                  <td class="rd_bg">600元/次</td>
-                  <td class="trs">1200元/3次<br>1500元/5次</td>
-                  <td class="trw rd_bg"></td>
-                </tr>
-              </table>
-            </table>
-    </div></el-col>
-      <el-col class="margin-t-40 background-colorw" :span="18"><div class="grid-content bg-purple margin-b-50">
-        <div class="content-box">
-          <h2 class="text-align-c hr">
-            <span>服务价格</span>
-          </h2>
-        </div>
-        <ul class="clearfix main-content">
-          <li class="li1">
-            <a href="javascript:void(0)"></a>
-            <p>在线预约</p>
-          </li>
-          <li class="li1">
-            <a href="javascript:void(0)"></a>
-            <p>体验服务</p>
-          </li>
-          <li class="li1">
-            <a href="javascript:void(0)"></a>
-            <p>定制套餐</p>
-          </li>
-          <li class="li1">
-            <a href="javascript:void(0)"></a>
-            <p>平台派单</p>
-          </li>
-          <li class="li1">
-            <a href="javascript:void(0)"></a>
-            <p>完成服务</p>
-          </li>
-          <li class="li1">
-            <a href="javascript:void(0)"></a>
-            <p>客户回访</p>
-          </li>
-        </ul>
-      </div></el-col>
-      <!--底部-->
       <el-col class="margin-b-30 margin-t-40 background-colorw" :span="18"><div class="grid-content bg-purple">
         <div class="content-box">
           <h2 class="text-align-c hr">
@@ -346,7 +104,6 @@ export default {
   mounted () {
     Cuir((data) => {
       this.listimg = data.paddress
-      // console.log(data)
     })
     Cuirbaner((data) => {
       this.listbaner = data.paddress

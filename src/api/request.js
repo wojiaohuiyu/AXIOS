@@ -4,7 +4,7 @@ import sendaxios from './axios'
 let postList = function (callback) {
   sendaxios('post', 'jsopnctiy_queryAllcity.action').then((res) => {
     callback(res)
-    console.log('1已经用回调函数callback')
+    // console.log('已经用回调函数callback')
   })
 }
 // 顶部导航
@@ -13,10 +13,29 @@ let viewList = function (callback) {
     bid: 6
   }).then((res) => {
     callback(res)
-    console.log('2已经用回调函数callback')
+    // console.log('已经用回调函数callback')
   })
 }
 export {
   postList,
-  viewList
+  viewList,
+  leftList
+  bmlrList
+  viewList,
+  indexList,
+  indaiList,
+  indexlList,
+  Cuir,
+  Cuirbaner,
+  Yuer,
+  Yuerbaner,
+  paddList,
+  rightList,
+  leftList,
+  indexhysj,
+  viewysList,
+  yslrList,
+  ysxxList,
+  bmList,
+  bmlrList
 }

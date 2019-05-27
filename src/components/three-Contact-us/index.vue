@@ -131,11 +131,14 @@ export default {
   },
   data () {
     return {
+    }
       banner: [],
       tonet: [],
       lists: [],
       imgs: [],
-      api
+      imglist: [sursore1, sursore2],
+      api,
+      imglist: [sursore1, sursore2],
     }
   },
   mounted () {
