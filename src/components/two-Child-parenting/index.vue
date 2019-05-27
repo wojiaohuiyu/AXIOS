@@ -52,7 +52,7 @@
 import sursore1 from './images/1.jpg'
 import sursore2 from './images/1.jpg'
 import sursore3 from './images/1.jpg'
-import {paddList} from 'api/request'
+import {paddList} from 'api/red'
 export default {
   data () {
     return {

@@ -19,146 +19,13 @@
       <div class="MenuBox">
         <nav class="Menu LMenu" id="fixer">
           <ul>
-            <li class="on">
+            <li class="on" v-for="(item, index) in rightedList" :key="index">
               <a href="#">
-                <i>服务<br>范围</i>
-              </a>
-            </li>
-            <li class="">
-              <a href="#">
-                <i>服务<br>价格</i>
-              </a>
-            </li>
-            <li class="">
-              <a href="#">
-                <i>服务<br>标准</i>
-              </a>
-            </li>
-            <li class="">
-              <a href="#">
-                <i>保洁师<br>风采</i>
+                <i><img :src="api + item"/></i>
               </a>
             </li>
           </ul>
         </nav>
-      </div>
-      <!--内容-->
-      <div class="cleaned">
-        <div class="cleared page">
-          <div class="team repeat1">
-            <div class="title">
-              <span>服务范围<b></b></span>
-            </div>
-            <div class="infotxt">
-                <ul class="dscfw">
-                  <li class="dscfwl">
-                    <b><img src="./images/4.jpg"></b>
-                    <span>清洗擦拭</span>
-                    <em>Cleaning wipes</em>
-                    <p>玻璃镜面干净透亮洁<br>瓷砖光亮洁净</p>
-                  </li>
-                  <li class="dscfwl">
-                    <b><img src="./images/5.jpg" alt=""></b>
-                    <span>除胶除漆</span>
-                    <em>SPECIAL CLEANING</em>
-                    <p>地面墙面去除痕迹<br>胶点漆点专项清理</p>
-                  </li>
-                  <li class="dscfwl">
-                    <b><img src="./images/6.jpg" alt=""></b>
-                    <span>重点清洁</span>
-                    <em>VACUUM CLEANING</em>
-                    <p>全面吸尘超倍洁净<br>家具家电死角除尘</p>
-                  </li>
-                </ul>
-              <div class="clear"></div>
-            </div>
-            <i class="bot_icon"></i>
-          </div>
-          <div class="team repeat2">
-            <div class="title">
-              <span>服务价格<b></b></span>
-            </div>
-            <div class="infotxt">
-              <table class="dsc">
-                <tbody>
-                <tr class="orgin">
-                  <th>服务类型</th>
-                  <th colspan="3">起步价</th>
-                  <th>价格</th>
-                  <th colspan="2">备注说明</th>
-                </tr>
-                <tr>
-                  <th>无家具全装修</th>
-                  <th colspan="3">500元</th>
-                  <th>6元/m<sup>2</sup></th>
-                  <th colspan="2">超出60m<sup>2</sup>部分6元/m<sup>2</sup></th>
-                </tr>
-                <tr>
-                  <th>有家具全装修</th>
-                  <th colspan="3">560元</th>
-                  <th>7元/m<sup>2</sup></th>
-                  <th colspan="2">超出60m<sup>2</sup>部分7元/m<sup>2</sup></th>
-                </tr>
-                <tr>
-                  <th>别墅开荒保洁</th>
-                  <th colspan="3">1900元</th>
-                  <th>10元/m<sup>2</sup></th>
-                  <th colspan="2">超出200m<sup>2</sup>部分10元/m<sup>2</sup></th>
-                </tr>
-                <tr>
-                  <th colspan="9" style="color:#ff6600;font-size:16px;font-weight:bold;">温馨提示：别墅开荒实际开荒面积以房产证加实际扩建面积为准（别墅开荒不包含擦玻璃）</th>
-                </tr>
-                </tbody>
-              </table>
-              <div class="clear"></div>
-            </div>
-            <i class="bot_icon"></i>
-          </div>
-          <div class="team repeat4">
-            <div class="title"><span>服务标准<b></b></span></div>
-            <div class="infotxt">
-              <img src="./images/30.png">
-              <div class="clear"></div>
-            </div>
-            <i class="bot_icon"></i>
-          </div>
-          <div class="team repeat5">
-            <div class="title"><span>保洁师风采<b></b></span></div>
-            <div class="infotxt">
-              <ul class="ImgList">
-                <li>
-                  <em><a href="#">
-                    <img src="./images/21.jpg">
-                  </a></em>
-                  <span><b>赵家群|</b> 安徽</span>
-                  <i>46岁&nbsp;10年工作经验</i>
-                </li>
-                <li>
-                  <em><a href="#">
-                    <img src="./images/22.jpg">
-                  </a></em>
-                  <span><b>徐金梅||</b> 安徽</span>
-                  <i>47岁&nbsp;7年工作经验</i>
-                </li>
-                <li>
-                  <em><a href="#">
-                    <img src="./images/23.jpg">
-                  </a></em>
-                  <span><b>汪宗梅||</b>陕西</span>
-                  <i>39岁&nbsp;6年工作经验</i>
-                </li>
-                <li>
-                  <em><a href="#">
-                    <img src="./images/24.jpg">
-                  </a></em>
-                  <span><b>史桂兰||</b>扬州</span>
-                  <i>56岁&nbsp;7年工作经验</i>
-                </li>
-              </ul>
-              <div class="clear"></div>
-            </div>
-          </div>
-        </div>
       </div>
       <!--右侧-->
       <aside class="el-asider">
@@ -181,34 +48,41 @@
   </div>
 </template>
 <script>
+import {rightedList} from 'api/red'
+import {api} from 'api/index'
 import sursore1 from './images/1.jpg'
 import sursore2 from './images/1.jpg'
 import sursore3 from './images/1.jpg'
 export default {
   mounted () {
     window.addEventListener('scroll', this.handleScroll)
+    rightedList((data) => {
+      this.rightedList = data[0].data
+      console.log(this.rightedList)
+    })
   },
   methods: {
     handleScroll () {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-      var offsetTop = document.querySelector('#searchBar').offsetTop;
-      var offsetTop = document.querySelector('#fixer').offsetTop;
-      if(scrollTop <= 631){
-        offsetTop = 631 - Number(scrollTop);
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+      var offsetTop = document.querySelector('#searchBar', '#fixer').offsetTop
+      if (scrollTop <= 631) {
+        offsetTop = 631 - Number(scrollTop)
         document.querySelector('#searchBar').style.top = offsetTop + 'px'
-        document.querySelector('#fixer').style.top = offsetTop + 'px';
-      }else{
-        document.querySelector('#searchBar').style.top = '0px';
-        document.querySelector('#fixer').style.top = '0px';
+        document.querySelector('#fixer').style.top = offsetTop + 'px'
+      } else {
+        document.querySelector('#searchBar').style.top = '0px'
+        document.querySelector('#fixer').style.top = '0px'
       }
-    },
+    }
   },
   destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
   },
   data () {
     return {
-      imglist: [sursore1,sursore2,sursore3]
+      imglist: [sursore1, sursore2, sursore3],
+      rightedList: [],
+      api
     }
   }
 }
@@ -267,7 +141,6 @@ export default {
   /*走马灯*/
   .clear {
     clear: both;
-    height: 0px;
     overflow: hidden;
   }
   .oriflamme{
@@ -286,7 +159,7 @@ export default {
   }
   .header-clean dl{
     line-height: 40px;
-    padding: 0px 20px 0px 40px;
+    padding: 0 20px 0 40px;
     background: url(./images/2.gif) no-repeat 17px center;
   }
   .header-clean dl a{

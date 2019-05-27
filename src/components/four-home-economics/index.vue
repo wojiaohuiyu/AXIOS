@@ -353,7 +353,6 @@ export default {
       this.listconent = data.data
     })
   }
-
 }
 </script>
 <style lang="less" scoped>

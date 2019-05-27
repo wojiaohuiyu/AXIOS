@@ -14,7 +14,7 @@ export default {
   components: {
     Topnav,
     Footer
-  },
+  }
 }
 </script>
 

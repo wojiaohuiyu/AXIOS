@@ -36,7 +36,7 @@
 </template>
 <script>
 import md5 from 'js-md5'
-import {leftList} from 'api/request'
+import {leftList} from 'api/red'
 export default {
   name: 'Register',
   data () {
@@ -102,7 +102,7 @@ export default {
     sendCode () {
       let tel = this.ruleForm2.tel
       leftList({
-        user_uphone: this.ruleForm2.tel
+        useruphone: this.ruleForm2.tel
       }, (res) => {
         console.log(res)
       })
@@ -137,12 +137,6 @@ export default {
         }
       })
     },
-    // <!--进入登录页-->
-    gotoLogin () {
-      this.$router.push({
-        path: '/onminty'
-      })
-    },
     // 验证手机号
     checkMobile (str) {
       let re = /^1\d{10}$/
@@ -151,6 +145,12 @@ export default {
       } else {
         return false
       }
+    },
+    // <!--进入登录页-->
+    gotoLogin () {
+      this.$router.push({
+        path: '/onminty'
+      })
     }
   }
 }
