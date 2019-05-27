@@ -66,7 +66,7 @@
 <script>
 import {api} from 'api/index'
 import {postList} from 'api/request'
-import {indexList, indaiList, viewysList} from 'api/ctx'
+import {indexList, indaiList, viewList} from 'api/ctx'
 export default {
   data () {
     return {
@@ -88,7 +88,7 @@ export default {
     indaiList((data) => {
       this.list = data.data
     })
-    viewysList((data) => {
+    viewList((data) => {
       this.lind = data[0].data
       this.banner = data[0].paddress
       console.log(this.banner)
