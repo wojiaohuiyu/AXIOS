@@ -6,66 +6,107 @@
         <div class="logo-title">欢迎登录</div>
       </div>
     </div>
-    <div class="pages">
-      <el-row type="flex" justify="center" class="over">
-        <el-form ref="loginForm" :model="user" :rules="rules" status-icon label-width="80px">
-          <el-form-item label="用户名" prop="name">
-            <el-input v-model="user.name"></el-input>
+    <div class="over">
+      <div class="login">
+        <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+          <el-form-item label="手机" prop="phone">
+            <el-input v-model="ruleForm.phone" placeholder="手机号登录"></el-input>
           </el-form-item>
-          <el-form-item label="密码" prop="pass">
-            <el-input v-model="user.pass" type="password"></el-input>
+          <el-form-item label="密码"  prop="pass">
+            <el-input type="password" v-model="ruleForm.pass" autocomplete="off" placeholder="密码"></el-input>
           </el-form-item>
+          <div class="msg">
+            <div>{{ruleForm.msg}}</div>
+          </div>
           <el-form-item>
-            <el-button type="primary" icon="el-icon-upload" @click="login" class="pyte">登录</el-button>
-            <p class="logined" @click="gotoedLogin">么有账号？快去注册</p>
+            <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
           </el-form-item>
         </el-form>
-      </el-row>
+        <!--<router-link to="/sixz">快去注册吧！</router-link>-->
+      </div>
     </div>
   </div>
 </template>
 <script>
+import {beefList} from 'api/request_hy'
 export default {
+  data () {
+    var phone = (rule, value, callback) => {
+      if (!value) {
+        return callback(new Error('账号错误'))
+      } else {
+        var reg = /^1[34578]\d{9}$/
+        if (reg.test(value) === false) {
+          return callback(new Error('请输入正确的账号'))
+        } else {
+          callback()
+        }
+      }
+    }
+    var validatePass = (rule, value, callback) => {
+      if (value === '') {
+        callback(new Error('请输入密码'))
+      } else {
+        if (this.ruleForm.checkPass !== '') {
+          this.$refs.ruleForm.validateField('checkPass')
+        }
+        callback()
+      }
+    }
+    return {
+      ruleForm: {
+        msg: '',
+        pass: '',
+        phone: ''
+      },
+      activeName: 'second',
+      rules: {
+        pass: [
+          { validator: validatePass, trigger: 'blur' }
+        ],
+        phone: [
+          { validator: phone, trigger: 'blur' }
+        ]
+      }
+    }
+  },
   methods: {
-    gotoedLogin () {
-      this.$router.push({
-        path: '/sixz'
-      })
-    },
-    login () {
-      this.$refs.loginForm.validate((valid) => {
+    submitForm (ruleForm) {
+      // 手机
+      // let phone = this.ruleForm.phone
+      // 密码
+      // let pwd = this.ruleForm.pass
+      // if (phone !== '' && pwd !== '' && pic === '验证成功') {
+      //   console.log(111)
+      // }
+      this.$refs[ruleForm].validate((valid) => {
         if (valid) {
-          if (this.user.name === '123' && this.user.pass === '123') {
-            this.$notify({
-              type: 'success',
-              message: '欢迎你,' + this.user.name + '!',
-              duration: 3000
-            })
-            this.$router.replace('/eight')
-          } else {
-            this.$message({
-              type: 'error',
-              message: '用户名或密码错误',
-              showClose: true
-            })
-          }
+          beefList({
+            'useruphone': this.ruleForm.phone,
+            'userupassword': this.ruleForm.pass
+          }, (res) => {
+            console.log(res)
+            alert(res.message)
+            window.localStorage.setItem('token',res.success)
+            window.localStorage.setItem('user',JSON.stringify(res.telphone))
+            // 跳转到首页
+            if (res.success === true) {
+              this.$router.push({path: '/eight'})
+            }
+          })
         } else {
           return false
         }
       })
-    }
-  },
-  data () {
-    return {
-      user: {},
-      rules: {
-        name: [
-          {required: true, message: '用户名不能为空', trigger: 'blur'}
-        ],
-        pass: [
-          {required: true, message: '密码不能为空', trigger: 'blur'}
-        ]
-      }
+    },
+    onSuccess () {
+      this.ruleForm.msg = '验证成功'
+    },
+    onFail () {
+      this.ruleForm.msg = '验证失败，请重新验证'
+    },
+    onRefresh () {
+      this.ruleForm.msg = '已刷新'
     }
   }
 }
@@ -73,6 +114,10 @@ export default {
 <style lang="less" scoped>
   .header{
     height: 150px;
+  }
+  .login{
+    width: 300px;
+    margin: 0 auto;
   }
   .w{
     width: 1200px;

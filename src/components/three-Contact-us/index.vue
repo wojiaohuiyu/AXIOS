@@ -3,24 +3,21 @@
 <div class="cotton">
   <!--走马灯-->
   <el-carousel height="480px">
-    <el-carousel-item v-for="(item , index) in imglist" :key="index">
+    <el-carousel-item>
       <img :src="api+banner" style="width: 100%;height: 100%; display: block;"/>
     </el-carousel-item>
   </el-carousel>
   <div class="container">
     <!--左侧-->
     <div class="caruser">
-<<<<<<< HEAD
       <div class="fllor1">
         <ul>
           <li>
             <p></p>
           </li>
         </ul>
-=======
       <div>
         <img :src="api+tonet" alt="">
->>>>>>> 792ea92f4637d7ea1c573b004d53cc9bc3f740b8
       </div>
       <div class="fllor5">
         <div class="title1">
@@ -106,14 +103,14 @@
     </aside>
   </div>
 </div>
+</div>
 </template>
 <script>
 import {api} from 'api/index'
-import {viewysList, yslrList, ysxxList} from 'api/request'
+import {viewysList, yslrList, ysxxList} from 'api/ctx'
 import sursore1 from './imgaes/17.jpg'
 import sursore2 from './imgaes/18.jpg'
 export default {
-<<<<<<< HEAD
   mounted () {
     window. addEventListener('scroll', this.handleScroll)
   },
@@ -134,24 +131,11 @@ export default {
   },
   data () {
     return {
-      imglist: [sursore1, sursore2]
-    }
-=======
-  data () {
-    return {
       banner: [],
       tonet: [],
       lists: [],
       imgs: [],
-      api,
-      imglist: [sursore1, sursore2],
-      list: [
-        {id: 1, name: '01', age: '新生儿生活护理', pack: '指导正确哺乳', packe: '喂养、呵护、洗澡', packed: '穿衣、换洗尿布', packing: '物品消毒'},
-        {id: 2, name: '02', age: '新生儿专业护理', pack: '婴儿洗澡、抚触', packe: '按摩，大小便观察', packed: '口腔、黄疸', packing: '脐部护理等'},
-        {id: 3, name: '03', age: '产妇生活护理', pack: '产妇营养餐制作', packe: '营养膳食搭配', packed: '协助产妇擦浴等'},
-        {id: 4, name: '04', age: '产妇专业护理', pack: '产褥期观察、护理', packe: '产后恢复指导', packed: '协助母乳喂养', packing: '健康护理'},
-        {id: 5, name: '05', age: '日常服务', pack: '为产妇及婴儿', packe: '清洗衣物', packed: '打扫母婴卧室卫生等'}
-      ]
+      api
     }
   },
   mounted () {
@@ -185,7 +169,6 @@ export default {
   },
   destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
->>>>>>> 792ea92f4637d7ea1c573b004d53cc9bc3f740b8
   }
 }
 </script>

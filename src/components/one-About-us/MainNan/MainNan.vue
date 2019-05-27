@@ -29,13 +29,10 @@ export default {
   mounted () {
     viewList((data) => {
       this.lind = data[0].data
-<<<<<<< HEAD
       console.log(data)
-=======
       this.banner2 = data[0].data.paddress
 //      this.lind = data[0].data
 //      console.log(data)
->>>>>>> 792ea92f4637d7ea1c573b004d53cc9bc3f740b8
     })
   }
 }

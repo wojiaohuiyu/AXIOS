@@ -232,14 +232,16 @@
   </div>
 </template>
 <script>
+import {postUser} from 'api/ctx'
 export default {
   data () {
     return {
+      user_a: [],
       tabPosition: 'left',
       pickerOptions1: {
         shortcuts: [{
           text: '今天',
-          onClick(picker) {
+          onClick (picker) {
             picker.$emit('pick', new Date());
           }
         }, {
@@ -261,6 +263,12 @@ export default {
       value1: '',
       value2: ''
     }
+  },
+  mounted () {
+    postUser((data) => {
+      this.user_a = data
+      console.log(this.user_a)
+    })
   }
 }
 </script>

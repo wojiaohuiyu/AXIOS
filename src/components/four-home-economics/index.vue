@@ -6,7 +6,7 @@
     </div>
       <div class="question background-colorwhite margin-b-60 colordeep">
         <h3 class="f-weight-700">您是否对催乳师感到疑惑？</h3>
-        <p>{{listconent[3].ppriority}}</p>
+        <p>{{listconent[3].priority}}</p>
         <span class="ban-ic"></span>
       </div>
     <div class="container clearfix">

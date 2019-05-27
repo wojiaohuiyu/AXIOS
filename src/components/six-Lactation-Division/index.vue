@@ -10,7 +10,7 @@
       <div class="register-wrapper">
         <div id="register">
           <p class="title">注册</p>
-          <el-form :model="ruleForm2" status-icon :rules="rules2" ref="ruleForm2" label-width="0" class="demo-ruleForm">
+          <el-form :model="ruleForm2" status-icon :rules="rules2" ref="ruleForm2" label-width="0" class="demo-ruleForm2">
             <el-form-item prop="tel">
               <el-input v-model="ruleForm2.tel" auto-complete="off" placeholder="请输入手机号"></el-input>
             </el-form-item>
@@ -36,7 +36,8 @@
 </template>
 <script>
 import md5 from 'js-md5'
-import {leftList} from 'api/request'
+import {leftList} from 'api/request_hy'
+import {orginList} from 'api/request_hy'
 export default {
   name: 'Register',
   data () {
@@ -102,7 +103,7 @@ export default {
     sendCode () {
       let tel = this.ruleForm2.tel
       leftList({
-        user_uphone: this.ruleForm2.tel
+        useruphone: this.ruleForm2.tel
       }, (res) => {
         console.log(res)
       })
@@ -127,20 +128,26 @@ export default {
       }
     },
     // <!--提交注册-->
-    submitForm (formName) {
+    submitForm (ruleForm2) {
       // 表单是否通过验证
-      this.$refs[formName].validate(valid => {
+      console.log(this.ruleForm2)
+      this.$refs[ruleForm2].validate(valid => {
         if (valid) {
-          console.log('注册成功')
+          orginList({
+            useruphone: this.tel,
+            userupassword: this.pass,
+            user_code: this.smscode
+          },(res) => {
+            console.log(res.message)
+          })
+          this.$message({
+            type: 'success',
+            message: '注册成功',
+          });
         } else {
+          console.log('error submit!!');
           return false
         }
-      })
-    },
-    // <!--进入登录页-->
-    gotoLogin () {
-      this.$router.push({
-        path: '/onminty'
       })
     },
     // 验证手机号
@@ -151,6 +158,12 @@ export default {
       } else {
         return false
       }
+    },
+    // <!--进入登录页-->
+    gotoLogin () {
+      this.$router.push({
+        path: '/onminty'
+      })
     }
   }
 }

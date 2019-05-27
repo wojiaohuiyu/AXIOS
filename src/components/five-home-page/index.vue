@@ -5,63 +5,11 @@
       </div>
     <div class="container">
       <el-row class="padding ks" :gutter="20">
-        <el-col :span="19" class="background-colorw margin-t-30"><div class="grid-content bg-purple">
-            <div class="value_list">
-              <h2>育儿嫂价值</h2>
-            </div>
-          <div class="parent_value">
-            <div class="five-conet">专业育儿嫂，依托专业的辅助团队，不仅为用户提供婴幼儿日常料理、健康膳食、用品清洁等专业护理，还能提供潜能开发、学前教
-              育和学前培养等成长服务。选择专业育儿嫂，帮助宝宝健康快乐成长。
-            </div>
-            <ul class="margin-t-40 clearfix">
-              <li>
-                <i>
-                  <img src="~im/sh.png">
-                </i>
-                <div class="write">
-                  <h3>生活照料</h3>
-                  <p>根据宝宝生活规律照顾宝宝的饮食起居</p>
-                </div>
-              </li>
-              <li>
-                <i>
-                  <img src="~im/sh.png">
-                </i>
-                <div class="write">
-                  <h3>生活照料</h3>
-                  <p>根据宝宝生活规律照顾宝宝的饮食起居</p>
-                </div>
-              </li>
-              <li>
-                <i>
-                  <img src="~im/sh.png">
-                </i>
-                <div class="write">
-                  <h3>生活照料</h3>
-                  <p>根据宝宝生活规律照顾宝宝的饮食起居</p>
-                </div>
-              </li>
-              <li>
-                <i>
-                  <img src="~im/sh.png">
-                </i>
-                <div class="write">
-                  <h3>生活照料</h3>
-                  <p>根据宝宝生活规律照顾宝宝的饮食起居</p>
-                </div>
-              </li>
-              <li>
-                <i>
-                  <img src="~im/sh.png">
-                </i>
-                <div class="write">
-                  <h3>生活照料</h3>
-                  <p>根据宝宝生活规律照顾宝宝的饮食起居</p>
-                </div>
-              </li>
-            </ul>
+        <el-col :span="19" class="background-colorw margin-t-30">
+          <div>
+            <img src="" alt="">
           </div>
-        </div></el-col>
+        </el-col>
         <!--侧边-->
         <el-col class="padding" :span="5"><div class="grid-content bg-purple">
           <Cebians></Cebians>
@@ -253,14 +201,13 @@
 </template>
 <script>
 import {api} from 'api/index'
-import {Yuer} from 'api/request'
-import {Yuerbaner} from 'api/request'
+import {yesbanner, yesbcont} from 'api/ctx'
 import Cebians from './comcebian/index.vue'
 export default {
   data () {
     return {
-      YueConet: [],
       Yuebaner: [],
+      YueConet: [],
       api
     }
   },
@@ -268,14 +215,15 @@ export default {
     Cebians
   },
   mounted () {
-    Yuer((data) => {
-      this.YueConet = data
+    yesbanner((data) => {
+      this.Yuebaner = data
       console.log('育儿嫂')
-      console.log(data)
+      console.log(this.Yuebaner)
     })
-    Yuerbaner((data) => {
+    yesbcont((data) => {
+      this.YueConet = data
       console.log('育儿嫂图片')
-      console.log(data)
+      console.log(this.YueConet)
     })
   }
 }

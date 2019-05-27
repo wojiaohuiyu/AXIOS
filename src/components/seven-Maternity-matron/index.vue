@@ -22,7 +22,7 @@
 </template>
 <script>
 import {api} from 'api/index'
-import {bmList, bmlrList} from 'api/request'
+import {bmList, bmlrList} from 'api/ctx'
 import Cebians from '../five-home-page/comcebian/index'
 export default {
   data () {
