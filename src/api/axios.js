@@ -10,6 +10,7 @@ import qs from 'qs'
 function sendaxios (methods = 'post', url, data = {}) {
   let requesturl = api + url + '?' + qs.stringify(data)
   return new Promise((resolve, reject) => {
+    let requesturl = api + url + '?' + qs.stringify(data)
     axios({
       methods: methods,
       url: requesturl

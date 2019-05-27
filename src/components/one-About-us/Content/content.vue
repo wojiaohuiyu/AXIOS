@@ -2,7 +2,6 @@
   <div>
     <div class="background-colorw content-t">
       <div>
-        <!--<img :src="api+banner" alt="" class="content-t-td">-->
         <img  src="../../../static/images/content-tp1.jpg" class="content-t-td" alt="">
       </div>
       <div class="mainnan-dq">
@@ -75,21 +74,19 @@ export default {
       jzfwlist: [],
       list: [],
       banner: [],
+      lind:[],
       api
     }
   },
   mounted () {
     postList((data) => {
       this.list_city = data[0].data
-      console.log(this.list_city)
     })
     indexList((data) => {
       this.jzfwlist = data[0].data
-      console.log(this.jzfwlist)
     })
     indaiList((data) => {
       this.list = data.data
-      console.log(this.list)
     })
     viewList((data) => {
       this.lind = data[0].data

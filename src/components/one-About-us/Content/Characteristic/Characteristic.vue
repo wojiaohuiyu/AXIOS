@@ -7,19 +7,19 @@
         <ul class="margin-t-50 characteristic-ul">
             <li class="shades">
               <img src="../../../../static/images/one-spe-serv1.png" alt="">
-              <div class="t-f-20 margin-t-20">{{lists[0].gname}}</div>
+              <div class="t-f-20 margin-t-20">{{lists.gname}}</div>
             </li>
             <li class="shades">
               <img src="../../../../static/images/one-spe-serv2.png" alt="">
-              <div class="t-f-20 margin-t-20">{{lists[1].gname}}</div>
+              <div class="t-f-20 margin-t-20">{{lists.gname}}</div>
             </li>
             <li class="shades">
               <img src="../../../../static/images/one-spe-serv3.png" alt="">
-              <div class="t-f-20 margin-t-20">{{lists[2].gname}}</div>
+              <div class="t-f-20 margin-t-20">{{lists.gname}}</div>
             </li>
             <li class="shades">
               <img src="../../../../static/images/one-spe-serv4.png" alt="">
-              <div class="t-f-20 margin-t-20">{{lists[3].gname}}</div>
+              <div class="t-f-20 margin-t-20">{{lists.gname}}</div>
             </li>
         </ul>
     </div>

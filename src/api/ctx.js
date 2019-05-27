@@ -1,5 +1,12 @@
 // 存放请求发送的方法
 import sendaxios from './axios'
+// 个人中心
+let postUser = function (callback) {
+  sendaxios('post', 'user_updateuser').then((res) => {
+    callback(res)
+    console.log('10已经用回调函数callback')
+  })
+}
 // 首页我们的优势
 let indaiList = function (callback) {
   sendaxios('post', 'jsopnadv_query.action').then((res) => {
@@ -37,7 +44,7 @@ let viewysList = function (callback) {
 }
 // 月嫂内容
 let yslrList = function (callback) {
-  sendaxios('post', 'PI_yuesaoServe.action?yuesao_id=1').then((res) => {
+  sendaxios('post', '/PI_yuesaoServe.action?yuesao_id=1').then((res) => {
     callback(res)
     console.log('已经用回调函数callback')
   })
@@ -77,23 +84,8 @@ let yesbcont = function (callback) {
     console.log('已经用回调函数callback')
   })
 }
-// 个人中心
-let postUser = function (callback) {
-  sendaxios('post', 'jsopnpic_queryImg.action').then((res) => {
-    callback(res)
-    console.log('10已经用回调函数callback')
-  })
-}
-// 预约
-let postSub = function (callback) {
-  sendaxios('post', 'sub_queryAll').then((res) => {
-    callback(res)
-    console.log('10已经用回调函数callback')
-  })
-}
 export {
   postUser,
-  postSub,
   indexList,
   indaiList,
   indexlList,

@@ -15,7 +15,6 @@
           <el-form-item label="密码"  prop="pass">
             <el-input type="password" v-model="ruleForm.pass" autocomplete="off" placeholder="密码"></el-input>
           </el-form-item>
-          <slide-verify :l="42" :r="10" :w="310" :h="155" @success="onSuccess" @fail="onFail" @refresh="onRefresh" :slider-text="ruleForm.text"></slide-verify>
           <div class="msg">
             <div>{{ruleForm.msg}}</div>
           </div>
@@ -29,9 +28,7 @@
   </div>
 </template>
 <script>
-import {mapState} from 'vuex'
-import {beefList} from 'api/request_hy'
-export default {
+import {beefList} from 'api/request_hy'export default {
   data () {
     var phone = (rule, value, callback) => {
       if (!value) {

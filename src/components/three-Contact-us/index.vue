@@ -108,6 +108,8 @@
 <script>
 import {api} from 'api/index'
 import {viewysList, yslrList, ysxxList} from 'api/ctx'
+import sursore1 from './imgaes/17.jpg'
+import sursore2 from './imgaes/18.jpg'
 export default {
   data () {
     return {
