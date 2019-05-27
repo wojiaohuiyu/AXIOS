@@ -34,38 +34,6 @@
                 <span class="icon-c-v icon-c-v1 margin-t-5 cursor"></span>
               </div>
           </li>
-          <!--<li class="shades">-->
-            <!--<i class="container-ul4-i"></i>-->
-            <!--<div class="t-f-20 hsff-7124">日常保洁</div>-->
-            <!--<div class="t-f-16 margin-t-5">钟点工/小时工/清洁护理</div>-->
-            <!--<div>-->
-              <!--<span class="icon-c-v icon-c-v1 margin-t-5 cursor"></span>-->
-            <!--</div>-->
-          <!--</li>-->
-        <!--<li class="shades">-->
-          <!--<i class="container-ul4-i"></i>-->
-          <!--<div class="t-f-20 hsff-7124">日常保洁</div>-->
-          <!--<div class="t-f-16 margin-t-5">钟点工/小时工/清洁护理</div>-->
-          <!--<div>-->
-            <!--<span class="icon-c-v icon-c-v1 margin-t-5 cursor"></span>-->
-          <!--</div>-->
-        <!--</li>-->
-        <!--<li class="shades">-->
-          <!--<i class="container-ul4-i"></i>-->
-          <!--<div class="t-f-20 hsff-7124">日常保洁</div>-->
-          <!--<div class="t-f-16 margin-t-5">钟点工/小时工/清洁护理</div>-->
-          <!--<div>-->
-            <!--<span class="icon-c-v icon-c-v1 margin-t-5 cursor"></span>-->
-          <!--</div>-->
-        <!--</li>-->
-        <!--<li class="shades">-->
-          <!--<i class="container-ul4-i"></i>-->
-          <!--<div class="t-f-20 hsff-7124">日常保洁</div>-->
-          <!--<div class="t-f-16 margin-t-5">钟点工/小时工/清洁护理</div>-->
-          <!--<div>-->
-            <!--<span class="icon-c-v icon-c-v1 margin-t-5 cursor"></span>-->
-          <!--</div>-->
-        <!--</li>-->
       </ul>
     </div>
     <!--我们的优势-->
@@ -92,43 +60,14 @@
                 </div>
               </div>
             </li>
-            <!--<li class="container-ul5-li2 text-align-c">-->
-              <!--<div class="container-ul5-li1-d1">-->
-                <!--<div class="disp-block"><img src="../../../static/images/one-3-1-1.png" alt=""></div>-->
-                <!--<div class="margin-t-20 t-f-26">家政保险</div>-->
-                <!--<div class="margin-t-10">Domestic insurance</div>-->
-                <!--<p>提供人身保险及用户物品保障</p>-->
-                <!--<p>人身意外险、让服务全程无忧</p>-->
-                <!--<div class="container-ul5-li1-d2"><img src="../../../static/images/one-3-1-2.png" alt=""></div>-->
-              <!--</div>-->
-            <!--</li>-->
-            <!--<li class="container-ul5-li2 text-align-c">-->
-              <!--<div class="container-ul5-li1-d1">-->
-                <!--<div class="disp-block"><img src="../../../static/images/one-3-1-1.png" alt=""></div>-->
-                <!--<div class="margin-t-20 t-f-26">家政保险</div>-->
-                <!--<div class="margin-t-10">Domestic insurance</div>-->
-                <!--<p>提供人身保险及用户物品保障</p>-->
-                <!--<p>人身意外险、让服务全程无忧</p>-->
-                <!--<div class="container-ul5-li1-d2"><img src="../../../static/images/one-3-1-2.png" alt=""></div>-->
-              <!--</div>-->
-            <!--</li>-->
-            <!--<li class="container-ul5-li1 text-align-c">-->
-              <!--<div class="container-ul5-li1-d1">-->
-                <!--<div class="disp-block"><img src="../../../static/images/one-3-1-1.png" alt=""></div>-->
-                <!--<div class="margin-t-20 t-f-26">家政保险</div>-->
-                <!--<div class="margin-t-10">Domestic insurance</div>-->
-                <!--<p>提供人身保险及用户物品保障</p>-->
-                <!--<p>人身意外险、让服务全程无忧</p>-->
-                <!--<div class="container-ul5-li1-d2"><img src="../../../static/images/one-3-1-2.png" alt=""></div>-->
-              <!--</div>-->
-            <!--</li>-->
         </ul>
     </div>
   </div>
 </template>
 <script>
 import {api} from 'api/index'
-import {postList, indexList, indaiList, viewList} from 'api/request'
+import {postList} from 'api/request'
+import {indexList, indaiList, viewList} from 'api/ctx'
 export default {
   data () {
     return {
@@ -155,8 +94,7 @@ export default {
     viewList((data) => {
       this.lind = data[0].data
       this.banner = data[0].paddress
-//      this.lind = data[0].data
-      console.log(data[0].paddress)
+      console.log(this.banner)
     })
   }
 }

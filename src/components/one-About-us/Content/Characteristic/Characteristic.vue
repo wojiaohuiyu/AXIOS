@@ -104,7 +104,7 @@
   </div>
 </template>
 <script>
-import {indexlList, indexhysj} from 'api/request'
+import {indexlList, indexhysj} from 'api/ctx'
 export default {
   data () {
     return {

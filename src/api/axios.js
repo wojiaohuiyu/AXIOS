@@ -8,11 +8,11 @@ import qs from 'qs'
 // url请求地址
 // data发送的数据
 function sendaxios (methods = 'post', url, data = {}) {
+  let requesturl = api + url + '?' + qs.stringify(data)
   return new Promise((resolve, reject) => {
     axios({
       methods: methods,
-      url: api + url,
-      data: qs.stringify(data)
+      url: requesturl
     }).then((res) => {
       res = res.data
       resolve(res)

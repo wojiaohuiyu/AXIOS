@@ -13,7 +13,7 @@
                  <div class="basicInfo" v-if="active === 0">
                   <div>
                       <div>
-                          <div class="t-f-22 ff7e text-align-c">育婴育儿</div>
+                          <div class="t-f-22 ff7e text-align-c">临时工</div>
                           <div class="hs-666 margin-l-5 0">
                               <div>服务对象：1个月以上的宝宝</div>
                               <div>市场价格：上海地区主要以4000-6000元/月为主</div>
@@ -173,6 +173,7 @@
   </div>
 </template>
 <script>
+import {postSub} from 'api/ctx'
 export default {
   data () {
     return {
@@ -206,8 +207,15 @@ export default {
         }]
       },
       value1: '',
-      value2: ''
+      value2: '',
+      subl: []
     }
+  },
+  mounted () {
+    postSub((data) => {
+      this.subl = data
+      console.log(this.subl)
+    })
   },
   methods: {
     handleClick (tab, event) {
