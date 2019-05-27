@@ -17,7 +17,6 @@
           </li>
         </ul>
       <div>
-
         <img :src="api+tonet" alt="">
       </div>
       <div class="fllor5">
